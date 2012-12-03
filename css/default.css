@@ -4,51 +4,51 @@
 *
 */
 
-/* 重置浏览器CSS */
-/* 防止用户自定义背景颜色对网页的影响 */
+/* 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷CSS */
+/* 锟斤拷止锟矫伙拷锟皆讹拷锟藉背锟斤拷锟斤拷色锟斤拷锟斤拷页锟斤拷影锟斤拷 */
 html {color:#000; background:#F8F8F0;}
-/* 内外边距通常让各个浏览器样式的表现位置不同 */
+/* 锟斤拷锟斤拷锟竭撅拷通锟斤拷锟矫革拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷式锟侥憋拷锟斤拷位锟矫诧拷同 */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {margin:0; padding:0;}
-/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+/* 锟斤拷锟斤拷 HTML5 锟斤拷签, IE 锟斤拷要锟斤拷 js 锟斤拷 createElement(TAG) */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
-  /* 要注意表单元素并不继续父级 font 的问题 */
+  /* 要注锟斤拷锟斤拷锟斤拷元锟截诧拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷 font 锟斤拷锟斤拷锟斤拷 */
 body,button,input,select,textarea {font-size:12px/1.5;}
 input,select,textarea {font-size:100%;}
-  /* 去掉各Table  cell 的边距并让其边重合 */
+  /* 去锟斤拷锟斤拷Table  cell 锟侥边距并锟斤拷锟斤拷锟斤拷锟截猴拷 */
 table {border-collapse:collapse; border-spacing:0;}
-  /* IE bug fixed: th 不继承 text-align*/
+  /* IE bug fixed: th 锟斤拷锟教筹拷 text-align*/
 th {text-align:inherit;}
-/* 去除默认边框 */
+/* 去锟斤拷默锟较边匡拷 */
 fieldset,img,a img {border:0;}
-/* ie6 7 8(q) bug 显示为行内表现 */
+/* ie6 7 8(q) bug 锟斤拷示为锟斤拷锟节憋拷锟斤拷 */
 iframe {display:block;}
-/* 去掉 firefox 下此元素的边框 */
+/* 去锟斤拷 firefox 锟铰达拷元锟截的边匡拷 */
 abbr,acronym {border:0;font-variant:normal;}
-/* 一致的 del 样式 */
+/* 一锟铰碉拷 del 锟斤拷式 */
 del {text-decoration:line-through;}
 address,caption,cite,code,dfn,em,th,var {font-style:normal; font-weight:500;}
-  /* 去掉列表前的标识, li 会继承 */
+  /* 去锟斤拷锟叫憋拷前锟侥憋拷识, li 锟斤拷锟教筹拷 */
 ol,ul {list-style:none;}
-/* 对齐是排版最重要的因素, 别让什么都居中 */
+/* 锟斤拷锟斤拷锟斤拷锟脚帮拷锟斤拷锟斤拷要锟斤拷锟斤拷锟斤拷, 锟斤拷锟斤拷什么锟斤拷锟斤拷锟斤拷 */
 caption,th {text-align:left;}
-/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+/* 锟斤拷锟斤拷yahoo, 锟矫憋拷锟解都锟皆讹拷锟斤拷, 锟斤拷应锟斤拷锟斤拷系统应锟斤拷 */
 h1,h2,h3,h4,h5,h6 {font-size:100%; font-weight:500;}
 q:before,q:after {content:'';}
-/* 统一上标和下标 */
+/* 统一锟较憋拷锟斤拷锟铰憋拷 */
 sup {vertical-align:text-top;}
 sub {vertical-align:text-bottom;}
-/* 清理浮动 */
+/* 锟斤拷锟斤拷锟斤拷锟斤拷 */
 .clearfix:after {visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
 .clearfix {zoom:1; /* for IE6 IE7 */}
-/* 隐藏, 通常用来与 JS 配合 */
+/* 锟斤拷锟斤拷, 通锟斤拷锟斤拷锟斤拷锟斤拷 JS 锟斤拷锟斤拷 */
 body .hide {display:none;}
-/* 设置内联, 减少浮动带来的bug */
+/* 锟斤拷锟斤拷锟斤拷锟斤拷, 锟斤拷锟劫革拷锟斤拷锟斤拷锟斤拷锟斤拷bug */
 .left,.right {display:inline;}
 .left {float:left;}
 .right {float:right;}
 
 /**default settings**/
-html {width:80%; text-align:center}
-body {font-family: "微软雅黑", "Arial", "Helvetica", "sans-serif"; font-size:16px; background:#F8F8F0}
+html {width:80%; margin:50%}
+body {font-family: "微锟斤拷锟脚猴拷", "Arial", "Helvetica", "sans-serif"; font-size:16px; background:#F8F8F0}
 a {color:#4A75B5; text-decoration:none; outline:none;}
 a:hover {text-decoration:underline}
