@@ -48,4 +48,7 @@ body .hide {display:none;}
 .right {float:right;}
 
 /**default settings**/
-body {font-family:"Î¢ÈíÑÅºÚ","Arial","Helvetica","sans-serif";font-size:16px;background:#F8F8F0}
+html {width:80%}
+body {font-family: "Î¢ÈíÑÅºÚ", "Arial", "Helvetica", "sans-serif"; font-size:16px; background:#F8F8F0}
+a {color:#4A75B5; text-decoration:none; outline:none;}
+a:hover {text-decoration:underline}
