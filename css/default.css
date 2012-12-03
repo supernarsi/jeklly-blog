@@ -48,7 +48,7 @@ body .hide {display:none;}
 .right {float:right;}
 
 /**default settings**/
-html {width:80%; margin:50%}
+html {width:80%; margin:0 auto}
 body {font-family: "΢���ź�", "Arial", "Helvetica", "sans-serif"; font-size:16px; background:#F8F8F0}
 a {color:#4A75B5; text-decoration:none; outline:none;}
 a:hover {text-decoration:underline}
