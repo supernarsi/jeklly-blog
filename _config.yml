@@ -2,8 +2,8 @@ safe:        false
 auto:        false
 server:      false
 server_port: 4000
-baseurl:    /jekyll_demo
-url: http://huangxc.com
+baseurl:     /jekyll_demo
+url:         http://huangxc.com
 
 source:      .
 destination: ./_site
@@ -26,7 +26,7 @@ rdiscount:
   extensions: []
 
 kramdown:
-  auto_ids: true,
+  auto_ids:    true,
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
@@ -39,7 +39,11 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: style
-	
-Permalink: /:title
 
-title: narsi的博客
+Permalink:    /:title
+
+title:        narsi的博客
+author:
+  name:       Narsi
+copyright:
+  - Design by <a href="http://huangxc.com">Narsi</a>. Power by <a href="https://github.com/mojombo/jekyll">Jekyll</a> and <a href="https://github.com/">GitHub</a>. &copy; Copyright 2012
