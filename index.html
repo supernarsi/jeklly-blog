@@ -7,7 +7,10 @@ title: Narsi's Blog
 <ul>
     {% for post in site.posts %}
         <li>
-            {{ post.date | date_to_string }} <a href="{{ site.baseurl1}}{{ post.url }}">《{{ post.title }}》</a>
+            {{ post.date | date_to_string }} <a href="{{ site.baseurl1}}{{ post.url }}" title="{{ post.title }}">《{{ post.title }}》</a>
         </li>
     {% endfor %}
 <ul>
+<script type="text/javascript">
+    $("a").tips();
+</script>
