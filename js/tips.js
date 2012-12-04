@@ -46,7 +46,9 @@
                         return false;
                     }
                     $po_left = e.pageX;
-                    $po_top = e.pageY;
+                    //$po_top = e.pageY;
+                    $height = $(this).height();
+                    $po_top = $(this).offset().top + $height;
                     show_tip($po_left, $po_top, $timeout);
                 },function(){
                     if(!opts.alive){
