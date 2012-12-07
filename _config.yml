@@ -9,7 +9,6 @@ source:      .
 destination: ./_site
 plugins:     ./_plugins
 
-exclude:    [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md",".html"]
 future:      true
 lsi:         false
 pygments:    false
@@ -47,18 +46,3 @@ author:
   name:       Narsi
 copyright:
   - Design by <a href="http://huangxc.com">Narsi</a>. Power by <a href="https://github.com/mojombo/jekyll" target="_blank">Jekyll</a> and <a href="https://github.com/" target="_blank">GitHub</a>. &copy; Copyright 2012
-
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-
-  # Settings for analytics helper
-  # Set 'provider' to the analytics provider you want to use.
-  # Set 'provider' to false to turn analytics off globally.
-  #        
-  analytics :
-    provider : google 
-    google : 
-        tracking_id : 'UA-123-12'
-    getclicky :
-      site_id : 
-    mixpanel :
-        token : '_MIXPANEL_TOKEN_'
