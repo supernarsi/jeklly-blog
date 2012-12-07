@@ -1,5 +1,20 @@
 ---
 layout: default
 ---
-{% include JB/setup %}
-{% include themes/twitter/page.html %}
+<div id="head">
+    <h1 class="left">
+    <strong><a href="http://huangxc.com">{{ site.title}}</a></strong>
+    </h1>
+</div>
+
+<div id="content">
+    {{ content }}
+</div>
+
+<div id="footer">
+    <div class="copyright right">
+        {% for line in site.copyright %}
+        <p>{{ line }}</p>
+        {% endfor %}
+    </div>
+</div>
