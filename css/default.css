@@ -64,7 +64,7 @@ body {color:gray;}
 .post_preview {border-left:solid thin #ccc; margin:20px;}
 .post_preview li {border-bottom:solid thin #ccc; margin-bottom:20px; padding:0 20px 20px 20px;}
 .post_preview .post_title {margin-bottom:20px; font-size:25px; font-weight:bold;}
-.read-more {font-size: 14px; border-bottom:dashed black;}
+.read-more {margin:10px; font-size:14px; border-bottom:dashed thin black;}
 .post_list {border-left:solid thin #ccc; margin:20px;}
 .post_list li {padding:20px;}
 /***********footer settings***********/
