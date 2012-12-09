@@ -3,8 +3,7 @@ layout: post
 title: 与君别——《when you are gone》文言翻译
 ---
 ##{{ page.title }}##
-####{{ page.date | date_to_string }}####
-<div style="text-align:center">
+####{{ page.date }}####
 I always needed time on my own.
 
 忆往日，歆羡闲云，
@@ -116,4 +115,3 @@ When you're gone,the words I need to hear to always get me through the day and m
 I miss you.
 
 却无言，唯相思。
-</div>
