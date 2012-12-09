@@ -57,7 +57,7 @@ h1 {margin:20px}
 /***********header settings***********/
 #header {clear: both}
 #header h1{font-size:20px;}
-#header h1 a{color: black}
+#header h1 a{color: black; text-decoration: none;}
 #header h1 a:hover{color: gray}
 /***********footer settings***********/
 #footer {clear: both}
