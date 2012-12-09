@@ -18,12 +18,12 @@ title: Narsi's Blog
         {% for post in site.posts %}
             <li>
                 <div class="post_title">
-                    <a href="{{ site.baseurl1}}{{ post.url }}" title="文章:{{ post.title }}">《{{ post.title }}》</a>
-                    {{ post.title }}
+                    <a href="{{ site.baseurl1}}{{ post.url }}" title="文章:{{ post.title }}">{{ post.title }}</a>
                 </div>
                 <div class="post_content">
                 {{ post.content }}
                 </div>
+                <div><hr /></div>
             </li>
         {% endfor %}
     </ul>
