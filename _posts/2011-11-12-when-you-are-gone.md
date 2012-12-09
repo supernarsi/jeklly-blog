@@ -2,8 +2,8 @@
 layout: post
 title: 与君别——《when you are gone》文言翻译
 ---
-####{{ page.date | date_to_string}}####
 ##{{ page.title }}##
+####{{ page.date | date_to_string}} By [narsi](http://huangxc.com)####
 I always needed time on my own.
 
 忆往日，歆羡闲云，

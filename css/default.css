@@ -82,5 +82,5 @@ div {margin:5px; padding:2px;}
 p {margin:3px; padding:1px;}
 .post_left {width:60%; float:left; margin:20px 20px 20px 0;}
 .post_post_content {border-left:solid thin #ccc; margin-bottom:30px; padding-left:15px;}
-.post_post_content h2 {margin-bottom:30px; font-size: 30px; font-weight:bold;}
-.post_post_content h4 {float:left}
+.post_post_content h2 {margin-bottom:15px; font-size: 30px; font-weight:bold;}
+.post_post_content h4 {margin-bottom: 15px;}
