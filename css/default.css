@@ -67,10 +67,11 @@ body {color:gray;}
 #disqus_thread {border-top:solid thin gray; padding-top:15px;}
 
 
-/***********content settings***********/
+/***********index_content settings***********/
 .page_post_preview {width:60%; border-left:solid thin #ccc; margin:20px 20px 20px 0; float:left;}
 .page_post_preview li {border-bottom:solid thin #ccc; margin-bottom:20px; padding:0 20px 20px 20px;}
-.page_post_preview .page_post_title {margin-bottom:20px; font-size:25px; font-weight:bold;}
+.page_post_preview .page_post_title a{margin-bottom:20px; font-size:25px; font-weight:bold;}
+.page_post_preview  h2 .index_post_time {margin-left:20px; font-size:15px; }
 .read-more {margin-top:15px; font-size:13px; text-decoration:underline; text-align:right;}
 .page_post_list {width:30%; border-left:solid thin #ccc; margin:20px 0 20px 20px; float:right;}
 .page_post_list h2 {border-bottom:solid thin #ccc; font-size:20px; font-weight:bold; padding:0 5px 10px 5px;}
