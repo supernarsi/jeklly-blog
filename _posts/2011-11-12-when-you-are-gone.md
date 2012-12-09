@@ -2,8 +2,8 @@
 layout: post
 title: 与君别——《when you are gone》文言翻译
 ---
-##{{ page.title }}##
 ####{{ page.date }}####
+##{{ page.title }}##
 I always needed time on my own.
 
 忆往日，歆羡闲云，
