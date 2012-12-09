@@ -64,7 +64,7 @@ body {color:gray;}
 /***********footer settings***********/
 #footer {clear:both;}
 /***********disqus settings***********/
-#disqus_thread {border-top:solid thin gray;}
+#disqus_thread {border-top:solid thin gray; padding-top:20px;}
 
 
 /***********content settings***********/
@@ -79,5 +79,5 @@ body {color:gray;}
 
 /***********post settings***********/
 .post_left {width:60%; float:left; margin:20px 20px 20px 0;}
-.post_post_content {border-left:solid thin #ccc; margin-bottom:20px;}
-.post_post_content h2 {font-size: 30px; font-weight:bold;}
+.post_post_content {border-left:solid thin #ccc; margin-bottom:30px;}
+.post_post_content h2 {margin-bottom:30px; font-size: 30px; font-weight:bold;}
