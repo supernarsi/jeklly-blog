@@ -65,8 +65,14 @@ body {color:gray;}
 #footer {clear:both;}
 /***********disqus settings***********/
 #disqus_thread {border-top:solid thin gray; padding-top:15px;}
-
-
+/***********back-to-top settings***********/
+p #back-to-top {position:fixed; bottom:100px; left:80px;}
+p #back-to-top a{text-align:center; text-decoration:none; color:#d1d1d1; display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
+p #back-to-top a:hover {color:#979797;}
+p #back-to-top a span {background:#d1d1d1 url(../images/back-to-top1.png) no-repeat center center; border-radius:6px; display:block; height:80px; width:80px; margin-bottom:5px; -moz-transition:background 1s;
+ -webkit-transition:background 1s; -o-transition:background 1s;}
+ #back-to-top a:hover span {background:#979797 url(../images/back-to-top1.png) no-repeat center center;}
+ 
 /***********index_content settings***********/
 .page_post_preview {width:60%; border-left:solid thin #ccc; margin:20px 20px 20px 0; float:left;}
 .page_post_preview li {border-bottom:solid thin #ccc; margin-bottom:20px; padding:0 20px 20px 20px;}
