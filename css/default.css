@@ -54,3 +54,6 @@ body {font-family: "微软雅黑","Arial","Helvetica","sans-serif"; font-size:16
 a {color:#4A75B5; text-decoration:none; outline:none;}
 a:hover {text-decoration:underline}
 h1 {margin:20px}
+
+/***********footer settings***********/
+#footer {clear: both}
