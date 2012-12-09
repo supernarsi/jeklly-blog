@@ -61,10 +61,10 @@ body {color:gray;}
 #header h1 a{color:black; text-decoration:none;}
 #header h1 a:hover{color:gray;}
 /***********content settings***********/
-.post_preview {border-left:solid thin gray; margin:20px;}
-.post_preview li {border-bottom:solid thin gray; margin-bottom:20px; padding:0 20px 20px 20px;}
+.post_preview {border-left:solid thin #ccc; margin:20px;}
+.post_preview li {border-bottom:solid thin #ccc; margin-bottom:20px; padding:0 20px 20px 20px;}
 .post_preview .post_title {margin-bottom:20px; font-size:25px; font-weight:bold;}
-.post_list {border-left:solid thin gray; margin:20px;}
+.post_list {border-left:solid thin #ccc; margin:20px;}
 .post_list li {padding:20px;}
 /***********footer settings***********/
 #footer {clear:both;}
