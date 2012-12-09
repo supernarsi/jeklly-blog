@@ -23,5 +23,11 @@ title: test
 </div>
 
 <div class="post_right">
-    
+    <ul>
+        {% for post in site.posts %}
+            <li>
+                {{ post.date | date:"%Y-%m-%d"}} <a href="{{ site.baseurl1}}{{ post.url }}" title="文章:{{ post.title }}">《{{ post.title }}》</a>
+            </li>
+        {% endfor %}
+    <ul>
 </div>
