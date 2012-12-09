@@ -63,5 +63,6 @@ body {color:gray;}
 /***********content settings***********/
 .post_preview {border-left:solid thin gray;}
 .post_preview li {border-bottom:solid thin gray;}
+.post_list {border-left:solid thin gray;}
 /***********footer settings***********/
 #footer {clear:both;}
