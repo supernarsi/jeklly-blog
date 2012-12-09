@@ -62,7 +62,7 @@ body {color:gray;}
 #header h1 a:hover{color:gray;}
 /***********content settings***********/
 .post_preview {border-left:solid thin gray;}
-.post_preview li {border-bottom:solid thin gray;}
+.post_preview li {border-bottom:solid thin gray; margin:20px 0; padding:0 20px;}
 .post_list {border-left:solid thin gray;}
 /***********footer settings***********/
 #footer {clear:both;}
