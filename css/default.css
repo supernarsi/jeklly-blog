@@ -66,9 +66,8 @@ body {color:gray;}
 /***********disqus settings***********/
 #disqus_thread {border-top:solid thin gray; padding-top:15px;}
 /***********back-to-top settings***********/
-p #back-to-top {position:fixed; top:100px; left:80px;}
-p #back-to-top a{text-align:center; text-decoration:none; color:#d1d1d1; display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
-p #back-to-top a:hover {color:#979797;}
+p #back-to-top {position:fixed; top:100px; left:980px;}
+p #back-to-top a{display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
  
 /***********index_content settings***********/
 .page_post_preview {width:60%; border-left:solid thin #ccc; margin:20px 20px 20px 0; float:left;}
