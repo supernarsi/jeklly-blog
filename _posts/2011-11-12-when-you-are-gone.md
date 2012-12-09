@@ -3,99 +3,115 @@ layout: post
 title: 与君别——《when you are gone》文言翻译
 ---
 ##{{ page.title }}##
-*I always needed time on my own.*
+####{{ page.date | date_to_string }}####
+<i>I always needed time on my own.</i>
+
 忆往日，歆羡闲云，
-*I never thought I'd need you there when I cry.*
+
+<i>I never thought I'd need you there when I cry.</i>
+
 美景佳期竟不识。
-*And the days feel like years when I'm alone.*
+
+<i>And the days feel like years when I'm alone.</i>
+
 叹如今，花落数年，
-*And the bed where you lie is made up on your side.*
+
+<i>And the bed where you lie is made up on your side.</i>
+
 山犹有木木无枝。
-*When you walk away,I count the steps that you take.*
+
+<i>When you walk away,I count the steps that you take.</i>
+
 已别沧海，山云纵相似。
-*Do you see how much I need you right now?*
+
+<i>Do you see how much I need you right now?</i>
+
 遥寄锦书，安知雁回时？
-*When you're gone,the pieces of my heart are missing you.*
+
+<i>When you're gone,the pieces of my heart are missing you.</i>
+
 与君别，寤寐尽相思；
-*When you're gone,the face I came to know is missing too.*
+
+<i>When you're gone,the face I came to know is missing too.</i>
+
 与君别，但念君容饰；
-*When you're gone,the words I need to hear to always get me through the day and make it OK.*
+
+<i>When you're gone,the words I need to hear to always get me through the day and make it OK.</i>
+
 与君别，曼语萦耳伴终日，
-*I miss you.*
+
+<i>I miss you.</i>
+
 却无言，唯相思。
-
- 
-
-I've never felt this way before.
+	
+<i>I've never felt this way before.</i>
 
 不曾记，此间仓皇，
 
-Everything that I do reminds me of you.
+<i>Everything that I do reminds me of you.</i>
 
 沅芷澧兰曾相识。
 
-And the clothes you left,they lie on the floor.
+<i>And the clothes you left,they lie on the floor.</i>
 
 犹可见，玉簪青衫，
 
-And they smell just like you,I love the things that you do.
+<i>And they smell just like you,I love the things that you do.</i>
 
 彤管炜美缘君施。
 
-When you walk away,I count the steps that you take.
+<i>When you walk away,I count the steps that you take.</i>
 
 已别沧海，山云纵相似。
 
-Do you see how much I need you right now?
+<i>Do you see how much I need you right now?</i>
 
 遥寄锦书，安知雁回时？
 
-When you're gone,the pieces of my heart are missing you.
+<i>When you're gone,the pieces of my heart are missing you.</i>
 
 与君别，寤寐尽相思；
 
-When you're gone,the face I came to know is missing too.
+<i>When you're gone,the face I came to know is missing too.</i>
 
 与君别，但念君容饰；
 
-When you're gone,the words I need to hear to always get me through the day and make it OK.
+<i>When you're gone,the words I need to hear to always get me through the day and make it OK.</i>
 
 与君别，曼语萦耳伴终日，
 
-I miss you.
+<i>I miss you.</i>
 
 却无言，唯相思。
-
- 
-
-We were made for each other,out here forever.
+    
+<i>We were made for each other,out here forever.</i>
 
 我本与君知，长命无绝衰。
 
-I know we were,yeah!
+<i>I know we were,yeah!</i>
 
 是然，定然！
 
-All I ever wanted was for you to know,everything I do, I'd give my heart and soul.
+<i>All I ever wanted was for you to know,everything I do, I'd give my heart and soul.</i>
 
 我欲与君知，诸事已尽心。
 
-I can hardly breathe I need to feel you here with me, yeah!
+<i>I can hardly breathe I need to feel you here with me, yeah!</i>
 
 仍悲，仍哀！
 
-When you're gone,the pieces of my heart are missing you.
+<i>When you're gone,the pieces of my heart are missing you.</i>
 
 与君别，寤寐尽相思；
 
-When you're gone,the face I came to know is missing too.
+<i>When you're gone,the face I came to know is missing too.</i>
 
 与君别，但念君容饰；
 
-When you're gone,the words I need to hear to always get me through the day and make it OK.
+<i>When you're gone,the words I need to hear to always get me through the day and make it OK.</i>
 
 与君别，曼语萦耳伴终日，
 
-I miss you.
+<i>I miss you.</i>
 
 却无言，唯相思。
