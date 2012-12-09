@@ -2,7 +2,7 @@
 layout: post
 title: 与君别——《when you are gone》文言翻译
 ---
-####{{ page.date }}####
+####{{ page.date | MM-DD}}####
 ##{{ page.title }}##
 I always needed time on my own.
 
