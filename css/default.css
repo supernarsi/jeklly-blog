@@ -63,7 +63,7 @@ body {color:gray;}
 /***********content settings***********/
 .post_preview {border-left:solid thin gray; margin:20px;}
 .post_preview li {border-bottom:solid thin gray; margin-bottom:20px; padding:0 20px 20px 20px;}
-.post_preview .post_title {margin-bottom:20px; font-size:10px; font-weight:bold;}
+.post_preview .post_title {margin-bottom:20px; font-size:25px; font-weight:bold;}
 .post_list {border-left:solid thin gray; margin:20px;}
 .post_list li {padding:20px;}
 /***********footer settings***********/
