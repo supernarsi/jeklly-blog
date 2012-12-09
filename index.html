@@ -2,16 +2,16 @@
 layout: page
 title: Narsi's Blog
 ---
-<div class="post_preview">
+<div class="page_post_preview">
     <ul>
         {% for post in site.posts %}
             <li>
-                <div class="post_title">
+                <div class="page_post_title">
                     <h2>
                     <a href="{{ site.baseurl1}}{{ post.url }}" title="文章:{{ post.title }}">{{ post.title }}</a>
                     </h2>
                 </div>
-                <div class="post_content">
+                <div class="page_post_content">
                 {{ post.content }}
                 <p class="read-more"><a href="{{ site.baseurl1}}{{ post.url }}">阅读全文</a></p>
                 </div>
@@ -20,7 +20,7 @@ title: Narsi's Blog
     </ul>
 </div>
 
-<div class="post_list">
+<div class="page_post_list">
     <h2>文章列表</h2>
     <ul>
         {% for post in site.posts %}
