@@ -66,7 +66,7 @@ body {color:gray;}
 .post_preview .post_title {margin-bottom:20px; font-size:25px; font-weight:bold;}
 .read-more {margin-top:15px; font-size:13px; text-decoration:underline; text-align:right;}
 .post_list {width:30%; border-left:solid thin #ccc; margin:20px 0 20px 20px; float:right;}
-.post_list h2 {border-bottom:solid thin #ccc; font-size:20px; font-weight:bold;}
+.post_list h2 {border-bottom:solid thin #ccc; font-size:20px; font-weight:bold; margin:0 5px 5px 5px;}
 .post_list li {padding:20px;}
 /***********footer settings***********/
 #footer {clear:both;}
