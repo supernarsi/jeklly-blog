@@ -86,3 +86,4 @@ p {margin:3px; padding:1px;}
 .post_post_content h2 {margin-bottom:15px; font-size: 30px; font-weight:bold;}
 .post_post_content h4 {margin-bottom: 25px; font-weight:bold;}
 .post_right {width:30%; border-left:solid thin #ccc; margin:20px 0 20px 20px; float:right;}
+.post_right li {padding:10px;}
