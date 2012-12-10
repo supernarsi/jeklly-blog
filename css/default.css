@@ -86,7 +86,7 @@ div {margin:5px; padding:2px;}
 p {margin:3px; padding:1px;}
 .post_left {width:60%; float:left; margin:20px 20px 20px 0; padding:0;}
 .post_post_content {border-left:solid thin #ccc; margin:0 0 30px 0; padding:0 0 0 15px;}
-.post_post_content p {margin:10px 0;}
+.post_post_content p {margin:10px 0; line-height:18px;}
 .post_post_content h2 {margin-bottom:15px; font-size: 30px; font-weight:bold;}
 .post_post_content h4 {margin-bottom: 25px; font-weight:bold;}
 .post_right {width:30%; border-left:solid thin #ccc; margin:20px 0 20px 20px; float:right;}
