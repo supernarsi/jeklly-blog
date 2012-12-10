@@ -20,8 +20,6 @@ table {border-collapse:collapse; border-spacing:0;}
 th {text-align:inherit;}
 /* 去除默认边框 */
 fieldset,img,a img {border:0;}
-/* ie6 7 8(q) bug 显示为行内表现 */
-iframe {display:block;}
 /* 去掉 firefox 下此元素的边框 */
 abbr,acronym {border:0; font-variant:normal;}
 /* 一致的 del 样式 */
