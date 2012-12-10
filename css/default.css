@@ -69,7 +69,7 @@ body {color:gray;}
 #back-to-top {position:fixed; bottom:100px; left:80%;}
 #back-to-top a{display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
 /***********douban_show settings***********/
-#douban_show {margin:0 auto; text-align:center;}
+#douban_show {margin:0 250px;}
 #douban_show tr {margin:50px; padding:30px;}
 #douban_show td {margin:50px; padding:20px;}
 
