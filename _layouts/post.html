@@ -7,12 +7,14 @@ title: test
         {{ content }}
     </div>
 
+    <div>
     {% if page.previous %}
         <a href={{ page.previous.url }} class="left">旧语： {{ page.previous.title | truncatewords:5 }}</a>
     {% endif %}
     {% if page.next %}
         <a href={{ page.next.url }} class="right">新言： {{ page.next.title | truncatewords:5 }}</a>
     {% endif %}
+    </div>
     <!--加载Disqus评论-->
     <div id="disqus_container">
         <a id="show_disqus" href="javascript:void(0)">点击查看评论</a>
