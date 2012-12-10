@@ -67,6 +67,8 @@ body {color:gray;}
 #back-to-top {position:fixed; bottom:100px; left:80%;}
 #back-to-top a{display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
 /***********about settings***********/
+.about_aboutme {border-bottom:solid thin #ccc;}
+.about_aboutme h2 {font-size:30px; text-align:center;}
 .about_left {width:60%; float:left; border-right:solid thin #ccc;}
 .about_right {width:30%; float:right;}
 .about_right li {line-height:30px;}
