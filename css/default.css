@@ -70,7 +70,7 @@ body {color:gray;}
 #back-to-top a{display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
  
 /***********index_content settings***********/
-#content {border:solid thin gray;}
+#content {border:solid thin gray; margin:0; padding:0;}
 .page_post_preview {width:60%; border:solid thin #ccc; margin:20px 20px 20px 0; padding:0; float:left;}
 .page_post_preview li {border-bottom:solid thin #ccc; margin-bottom:20px; padding:0 20px 20px 20px;}
 .page_post_preview .page_post_title a{margin-bottom:20px; font-size:25px; font-weight:bold; text-decoration:none;}
