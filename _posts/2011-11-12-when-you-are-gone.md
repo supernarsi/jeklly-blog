@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 与君别
+category: 文艺
 description: 自己用文言文翻译的《when you are gone》的歌词。
 ---
 ##{{ page.title }}##
