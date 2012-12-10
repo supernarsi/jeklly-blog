@@ -8,7 +8,7 @@
 /* 防止用户自定义背景颜色对网页的影响 */
 html {color:#000; background:#F8F8F0;}
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0; padding:0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0; padding:0;}
 /* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
   /* 要注意表单元素并不继续父级 font 的问题 */
@@ -70,7 +70,8 @@ body {color:gray;}
 #back-to-top a{display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
 /***********douban_show settings***********/
 #douban_show {margin:0 auto;}
-#douban_show p{margin:10px;}
+#douban_show tr {margin:20px;}
+#douban_show td {margin:10px;}
 
 /***********index_content settings***********/
 #content {margin:0; padding:0;}
