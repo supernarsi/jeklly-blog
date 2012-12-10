@@ -21,8 +21,17 @@ title: About Me
     <div>
         <ul>
             <li>E-mail<a href=""> huangxiangchao123@gmail.com</a></li>
-            <li><wb:follow-button uid="1633421434" type="red_1" width="67" height="24" >微博 </wb:follow-button></li>
+            <li>微博 <span id="wb_follow_btn"></span></li>
             <li>Website </li>
         </ul>
     </div>
 </div>
+
+<script>
+WB2.anyWhere(function(W){
+    W.widget.followButton({
+        'id': "wb_follow_btn"	//关注按钮容器ID
+        'nick_name': '姚晨'	//用户昵称
+    });
+});
+</script>
