@@ -66,7 +66,7 @@ body {color:gray;}
 /***********disqus settings***********/
 #disqus_thread {border-top:solid thin gray; padding-top:15px;}
 /***********back-to-top settings***********/
-#back-to-top {position:fixed; top:100px; left:980px;}
+#back-to-top {position:fixed; bottom:100px; left:90%;}
 #back-to-top a{display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
  
 /***********index_content settings***********/
