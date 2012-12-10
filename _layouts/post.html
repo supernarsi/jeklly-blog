@@ -9,10 +9,10 @@ title: test
 
     <div style="border:solid thin">
     {% if page.previous %}
-        <a href={{ page.previous.url }} class="left">旧语： {{ page.previous.title | truncatewords:5 }}</a>
+        <a href={{ page.previous.url style="text-align:left"}} >旧语： {{ page.previous.title | truncatewords:5 }}</a>
     {% endif %}
     {% if page.next %}
-        <a href={{ page.next.url }} class="right">新言： {{ page.next.title | truncatewords:5 }}</a>
+        <a href={{ page.next.url }} style="text-align:right">新言： {{ page.next.title | truncatewords:5 }}</a>
     {% endif %}
     </div>
     <!--加载Disqus评论-->
