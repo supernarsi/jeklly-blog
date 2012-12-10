@@ -68,7 +68,10 @@ body {color:gray;}
 /***********back-to-top settings***********/
 #back-to-top {position:fixed; bottom:100px; left:80%;}
 #back-to-top a{display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
- 
+/***********douban_show settings***********/
+#douban_show {margin:0 auto;}
+#douban_show p{margin:10px;}
+
 /***********index_content settings***********/
 #content {margin:0; padding:0;}
 .page_post_preview {width:60%; border-left:solid thin #ccc; margin:20px 20px 20px 0; padding:0; float:left;}
