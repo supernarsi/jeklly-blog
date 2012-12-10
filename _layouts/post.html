@@ -7,7 +7,7 @@ title: test
         {{ content }}
     </div>
 
-    <div class="left" style="width:60%">
+    <div class="left" style="width:100%">
     {% if page.previous %}
         <span style="text-align:left"><a href={{ page.previous.url}} class="left">旧语： {{ page.previous.title | truncatewords:5 }}</a></span>
     {% endif %}
@@ -16,7 +16,7 @@ title: test
     {% endif %}
     </div>
     <!--加载Disqus评论-->
-    <div id="disqus_container">
+    <div id="disqus_container" class="left" style="100%">
         <a id="show_disqus" href="javascript:void(0)">点击查看评论</a>
         <div id="disqus_thread"></div>
     </div>
