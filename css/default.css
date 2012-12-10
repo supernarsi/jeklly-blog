@@ -73,7 +73,7 @@ body {color:gray;}
 .about_right {width:30%; float:right;}
 #douban_show {padding:0 auto;}
 #douban_show_content {margin:0 auto; padding:auto;}
-#douban_show h2 {margin:10px; font-size:20px;}
+.about_left h2,.about_right h2 {margin:10px; font-size:20px;}
 
 /***********index_content settings***********/
 #content {margin:0; padding:0;}
