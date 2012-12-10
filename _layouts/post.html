@@ -8,7 +8,10 @@ title: test
     </div>
 
     {% if page.previous %}
-        <a href={{ page.previous.url }}>{{ page.previous.title | truncatewords:5 }}</a>
+        <a href={{ page.previous.url }} class="left">旧语： {{ page.previous.title | truncatewords:5 }}</a>
+    {% endif %}
+    {% if page.next %}
+        <a href={{ page.next.url }} class="right">新言： {{ page.next.title | truncatewords:5 }}</a>
     {% endif %}
     <!--加载Disqus评论-->
     <div id="disqus_container">
