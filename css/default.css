@@ -70,6 +70,7 @@ body {color:gray;}
 .about_left {width:60%; float:left; border-right:solid thin #ccc;}
 .about_right {width:30%; float:right;}
 .about_right li {line-height:30px;}
+.anout_right li iframe {margin:0; padding:0;}
 #douban_show {padding:0 auto;}
 #douban_show_content {margin:0 auto; padding:auto;}
 .about_left h2,.about_right h2 {margin:10px; font-size:20px;}
