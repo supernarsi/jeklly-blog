@@ -7,7 +7,7 @@ title: test
         {{ content }}
     </div>
 
-    <div style="border:solid thin">
+    <div class="left">
     {% if page.previous %}
         <span style="text-align:left"><a href={{ page.previous.url}} class="left">旧语： {{ page.previous.title | truncatewords:5 }}</a></span>
     {% endif %}
