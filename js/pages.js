@@ -28,6 +28,9 @@
             //默认显示第一页
             show_pages($cur_page);
             
+            if($pages_total < $pages_shownum){
+                $pages_shownum = $pages_total;
+            }
             //显示页码函数
             function show_pages($page){
                 //显示第n页内容
