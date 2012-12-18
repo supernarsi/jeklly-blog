@@ -24,13 +24,13 @@
             $pernum = opts.pernum;                          //获取每页显示条数
             $pages_shownum = opts.pages;                    //获取显示页码数
             $pages_total = Math.ceil($num_total/$pernum);   //计算总页码数
-            $cur_page = 1;
-            //默认显示第一页
-            show_pages($cur_page);
-            
             if($pages_total < $pages_shownum){
                 $pages_shownum = $pages_total;
             }
+            //默认显示第一页
+            $cur_page = 1;
+            show_pages($cur_page);
+            
             //显示页码函数
             function show_pages($page){
                 //显示第n页内容
