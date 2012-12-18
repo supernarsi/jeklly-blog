@@ -4,10 +4,10 @@ $(function(){
     $(function(){
         $(window).scroll(function(){
             if($(window).scrollTop() > 100){
-                $("#back-to-top").fadeIn(800);
+                $("#back-to-top").stop().delay(500).fadeIn(800);
             }
             else{
-                $("#back-to-top").fadeOut("fast");
+                $("#back-to-top").stop().delay(500).fadeOut("fast");
             }
         });
         $("#back-to-top").click(function(){
