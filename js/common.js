@@ -7,7 +7,7 @@ $(function(){
                 $("#back-to-top").fadeIn(1500);
             }
             else{
-                $("#back-to-top").stop().fadeOut("fast");
+                $("#back-to-top").fadeOut("fast");
             }
         });
         $("#back-to-top").click(function(){
