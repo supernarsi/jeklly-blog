@@ -17,5 +17,10 @@ $(function(){
     });
 });
 
-//tips插件
-$("a").tips();
+
+$(function(){
+    //tips插件
+    $("a").tips();
+    //翻页插件
+    $(".jquery_pages").pages({'pernum': 3, 'pages': 4, 'extremity': true, 'total': true});
+})
