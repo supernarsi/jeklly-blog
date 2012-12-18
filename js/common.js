@@ -4,7 +4,7 @@ $(function(){
     $(function(){
         $(window).scroll(function(){
             if($(window).scrollTop() > 100){
-                $("#back-to-top").fadeIn(1500);
+                $("#back-to-top").fadeIn(800);
             }
             else{
                 $("#back-to-top").fadeOut("fast");
