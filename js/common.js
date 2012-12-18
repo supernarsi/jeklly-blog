@@ -3,7 +3,6 @@ $(function(){
     $("#back-to-top").hide();
     $(function(){
         $(window).scroll(function(){
-            $("#back-to-top").stop();
             if($(window).scrollTop() > 100){
                 $("#back-to-top").fadeIn(800);
             }
