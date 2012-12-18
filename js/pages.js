@@ -24,6 +24,8 @@
             $pernum = opts.pernum;                          //获取每页显示条数
             $pages_shownum = opts.pages;                    //获取显示页码数
             $pages_total = Math.ceil($num_total/$pernum);   //计算总页码数
+            
+            //如果设置显示页码数大于总页数
             if($pages_total < $pages_shownum){
                 $pages_shownum = $pages_total;
             }
