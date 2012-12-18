@@ -22,5 +22,5 @@ $(function(){
     //tips插件
     $("a").tips();
     //翻页插件
-    $(".jquery_pages").pages({'pernum': 5, 'pages': 5, 'extremity': true, 'total': true});
+    //$(".jquery_pages").pages({'pernum': 5, 'pages': 5, 'extremity': true, 'total': true});
 })

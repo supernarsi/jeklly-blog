@@ -46,7 +46,7 @@
                 //显示页码
                 var $page_container = $("<div id='jquery_pages_content'></div>");
                 var $page_content = $("<span></span>");
-                $(".page_post_preview ul").append($page_container.html($page_content));
+                $("body").append($page_container.html($page_content));
                 var $page_content_html = "<span class='pages_total'>共" + $pages_total + "页</span> ";
                 $page_content_html += "<span class='jquery_pages_first'><a href='javascript:void(0)' class='jquery_pages_first'>首页</a></span> ";
                 $page_content_html += "<a href='javascript:void(0)' class='jquery_pages_prevpage'>上一页</a> ";
