@@ -17,27 +17,6 @@
     {{ content }}
     <p id="back-to-top"><a href="#top"><img src="/images/back-to-top.png"></a></p>
     
-    <script type="text/javascript">
-    //返回顶部
-    $(function(){
-        $("#back-to-top").hide();
-        $(function(){
-            $(window).scroll(function(){
-                if($(window).scrollTop() > 100){
-                    $("#back-to-top").fadeIn(1500);
-                }
-                else{
-                    $("#back-to-top").fadeOut(1000);
-                }
-            });
-            $("#back-to-top").click(function(){
-                $('body,html').animate({scrollTop:0}, 1000);
-                return false;
-            });
-        });
-    });
-    
-    $("a").tips();
-    </script>
+    <script src="../js/common.js"></script>
 </body>
 </html>
