@@ -59,7 +59,7 @@ body {color:gray;}
 #header h1{font-size:40px;}
 #header h1 a{color:black; text-decoration:none;}
 #header h1 a:hover{color:gray;}
-.nav_li {float: right; margin:0 20px; padding:10px;}
+.nav_li {float: right; margin:20px; padding:10px;}
 /***********footer settings***********/
 #footer {clear:both;}
 /***********disqus settings***********/
