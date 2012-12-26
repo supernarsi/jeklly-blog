@@ -59,8 +59,14 @@ body {color:gray;}
 #header h1{font-size:40px;}
 #header h1 a{color:black; text-decoration:none;}
 #header h1 a:hover{color:gray;}
-#nav {clear: both;}
 .nav_li {float: right; padding:10px; border:solid thin;}
+/* For modern browsers */
+.nav:before,
+.nav:after {content: ""; display: block;}
+.nav:after {clear: both;}
+/* For IE 6/7 (trigger hasLayout) */
+.cav{zoom: 1;}
+
 /***********footer settings***********/
 #footer {clear:both;}
 /***********disqus settings***********/
