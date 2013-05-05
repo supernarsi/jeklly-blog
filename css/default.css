@@ -12,7 +12,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 /* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
   /* 要注意表单元素并不继续父级 font 的问题 */
-body,button,input,select,textarea {font-size:12px/1.5;}
+body,button,input,select,textarea {font-size:12px;}
 input,select,textarea {font-size:100%;}
   /* 去掉各Table  cell 的边距并让其边重合 */
 table {border-collapse:collapse; border-spacing:0;}
@@ -37,7 +37,7 @@ sup {vertical-align:text-top;}
 sub {vertical-align:text-bottom;}
 /* 清理浮动 */
 .clearfix:after {visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
-.clearfix {zoom:1; /* for IE6 IE7 */}
+.clearfix {_zoom:1; /* for IE6 IE7 */}
 /* 隐藏, 通常用来与 JS 配合 */
 body .hide {display:none;}
 /* 设置内联, 减少浮动带来的bug */
@@ -65,7 +65,7 @@ body {color:gray;}
 .nav:after {content: ""; display: block;}
 .nav:after {clear: both;}
 /* For IE 6/7 (trigger hasLayout) */
-.cav{zoom: 1;}
+.cav{_zoom: 1;}
 
 /***********footer settings***********/
 #footer {clear:both;}
@@ -80,8 +80,8 @@ body {color:gray;}
 .about_left {width:60%; float:left; border-right:solid thin #ccc;}
 .about_right {width:30%; float:right;}
 .about_right li {line-height:30px;}
-#douban_show {padding:0 auto;}
-#douban_show_content {margin:0 auto; padding:auto;}
+#douban_show {padding:0;}
+#douban_show_content {margin:0 auto; padding:0;}
 .about_left h2,.about_right h2 {margin:10px; font-size:20px;}
 
 /***********index_content settings***********/
