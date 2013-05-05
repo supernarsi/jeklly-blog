@@ -65,7 +65,7 @@ body {color:gray;}
 .nav:after {content: ""; display: block;}
 .nav:after {clear: both;}
 /* For IE 6/7 (trigger hasLayout) */
-.cav{_zoom: 1;}
+.nav{_zoom: 1;}
 
 /***********footer settings***********/
 #footer {clear:both;}
