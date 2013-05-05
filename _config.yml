@@ -41,7 +41,8 @@ kramdown:
 
 permalink:    /:year/:title.html
 
-title:        narsi's blog
+title:        梦典
+alt:          narsi的记梦本
 author:
   name:       Narsi
 copyright:
