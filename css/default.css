@@ -48,7 +48,7 @@ body .hide {display:none;}
 
 /***********default settings**********/
 html {width:70%; margin:0 auto}
-body {font-family:"微软雅黑", "Arial", "Helvetica", "sans-serif"; font-size:15px; background:#F8F8F0; margin:20px 0;}
+body {font-family:"方正正纤黑", "华文黑体", "微软雅黑", "Arial", "Helvetica", "sans-serif"; font-size:15px; background:#F8F8F0; margin:20px 0;}
 a {color:black; text-decoration:none; outline:none;}
 a:hover {color:gray; text-decoration:underline;}
 h1 {margin:20px;}
