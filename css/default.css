@@ -58,7 +58,7 @@ body {color:gray;}
 #header {clear:both; margin:20px 0; padding:20px 0; border-bottom:solid thin gray;}
 #header h1{font-size:40px;}
 #header h1 a{color:gray; text-decoration:none;}
-#header h1 a:hover{color:black;}
+#header h1 a:hover{color:rgb(128,128,128);}
 .nav_li {float: right; margin:0; padding:0 6px; font-size:20px;}
 /* For modern browsers */
 .nav:before,
