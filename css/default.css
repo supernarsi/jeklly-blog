@@ -1,0 +1,109 @@
+/**
+* Author:   NarsiHuang
+* Contace:  huangxc.com
+*
+*/
+
+/* 重置浏览器CSS */
+/* 防止用户自定义背景颜色对网页的影响 */
+html {color:#000; background:#F8F8F0;}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0; padding:0;}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
+  /* 要注意表单元素并不继续父级 font 的问题 */
+body,button,input,select,textarea {font-size:12px;}
+input,select,textarea {font-size:100%;}
+  /* 去掉各Table  cell 的边距并让其边重合 */
+table {border-collapse:collapse; border-spacing:0;}
+  /* IE bug fixed: th 不继承 text-align*/
+th {text-align:inherit;}
+/* 去除默认边框 */
+fieldset,img,a img {border:0;}
+/* 去掉 firefox 下此元素的边框 */
+abbr,acronym {border:0; font-variant:normal;}
+/* 一致的 del 样式 */
+del {text-decoration:line-through;}
+address,caption,cite,code,dfn,em,th,var {font-style:normal; font-weight:500;}
+  /* 去掉列表前的标识, li 会继承 */
+ol,ul {list-style:none;}
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,th {text-align:left;}
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,h2,h3,h4,h5,h6 {font-size:100%; font-weight:500;}
+q:before,q:after {content:'';}
+/* 统一上标和下标 */
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+/* 清理浮动 */
+.clearfix:after {visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
+.clearfix {_zoom:1; /* for IE6 IE7 */}
+/* 隐藏, 通常用来与 JS 配合 */
+body .hide {display:none;}
+/* 设置内联, 减少浮动带来的bug */
+.left,.right {display:inline;}
+.left {float:left;}
+.right {float:right;}
+
+
+/***********default settings**********/
+html {width:70%; margin:0 auto}
+body {font-family:"方正正纤黑", "华文黑体", "微软雅黑", "Arial", "Helvetica", "sans-serif"; font-size:15px; background:#F8F8F0; margin:20px 0;}
+a {color:black; text-decoration:none; outline:none;}
+a:hover {color:gray; text-decoration:underline;}
+h1 {margin:20px;}
+body {color:gray;}
+
+/***********header settings***********/
+#header {clear:both; margin:20px 0; padding:20px 0; border-bottom:solid thin gray;}
+#header h1{font-size:40px;}
+#header h1 a{color:gray; text-decoration:none;}
+#header h1 a:hover{color:rgb(80,80,80);}
+.nav_li {float: right; margin:0; padding:0 6px; font-size:20px;}
+/* For modern browsers */
+.nav:before,
+.nav:after {content: ""; display: block;}
+.nav:after {clear: both;}
+/* For IE 6/7 (trigger hasLayout) */
+.nav{_zoom: 1;}
+
+/***********footer settings***********/
+#footer {clear:both;}
+/***********disqus settings***********/
+#disqus_container {border-top:solid thin gray; margin-top:10px; padding-top:15px;}
+/***********back-to-top settings***********/
+#back-to-top {position:fixed; bottom:100px; left:80%;}
+#back-to-top a{display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
+/***********about settings***********/
+.about_aboutme {border-bottom:solid thin #ccc;}
+.about_aboutme h2 {font-size:30px; text-align:center;}
+.about_left {width:60%; float:left; border-right:solid thin #ccc;}
+.about_right {width:30%; float:right;}
+.about_right li {line-height:30px;}
+#douban_show {padding:0;}
+#douban_show_content {margin:0 auto; padding:0;}
+.about_left h2,.about_right h2 {margin:10px; font-size:20px;}
+
+/***********index_content settings***********/
+#content {margin:0; padding:0;}
+.page_post_preview {width:60%; border-left:solid thin #ccc; margin:20px 20px 20px 0; padding:0; float:left;}
+.page_post_preview li {border-bottom:solid thin #ccc; margin-bottom:20px; padding:0 20px 20px 20px;}
+.page_post_preview .page_post_title a{margin-bottom:20px; font-size:25px; font-weight:bold; text-decoration:none;}
+.page_post_preview  h2 .index_post_time {margin-left:15px; font-size:15px; }
+.read-more {margin-top:15px; font-size:13px; text-decoration:underline; text-align:right;}
+.page_post_list {width:30%; border-left:solid thin #ccc; margin:20px 0 20px 20px; float:right;}
+.page_post_list h2 {border-bottom:solid thin #ccc; font-size:20px; font-weight:bold; padding:0 5px 10px 5px;}
+.page_post_list li {padding:20px;}
+
+
+/***********post settings***********/
+div {margin:5px; padding:2px;}
+p {margin:3px; padding:1px;}
+.post_left {width:60%; float:left; margin:20px 20px 20px 0; padding:0;}
+.post_post_content {border-left:solid thin #ccc; margin:0 0 30px 0; padding:0 0 0 15px;}
+.post_post_content p {margin:15px 0; line-height:25px;}
+.post_post_content h2 {margin-bottom:15px; font-size: 30px; font-weight:bold;}
+.post_post_content h4 {margin-bottom: 25px; font-weight:bold;}
+.post_right {width:30%; border-left:solid thin #ccc; margin:20px 0 20px 20px; float:right;}
+.post_right li {padding:10px;}
+.post_right h2 {border-bottom:solid thin #ccc; font-size:20px; font-weight:bold; padding:0 5px 10px 5px;}
