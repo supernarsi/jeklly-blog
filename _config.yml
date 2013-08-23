@@ -2,7 +2,6 @@ safe:        false
 auto:        false
 server:      false
 server_port: 4000
-baseurl:     /jekyll_demo
 url:         http://huangxc.com
 
 source:      .
