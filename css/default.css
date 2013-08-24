@@ -235,4 +235,12 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #about_me {width:680px; padding:20px;}
 #about_me .part1 {margin:20px auto; text-align:left; width:300px; line-height:30px;}
 #about_me .part2, .part3{text-align:center; color:rgb(210, 21, 210); }
+.part4 {width:80px;}
+.part4 img{float:left; border-radius:50%; width:150px ;height:150px; margin:20% 5px 0;}
 
+
+/***********404 page***********/
+#part404 {background:rgb(255, 255, 255); box-shadow:2px 3px 6px rgb(204, 204, 204); width:600px; height:200px; margin:40px auto; padding:20px;}
+#part404 h1 {margin:150px auto 20px; font-size:30px; text-align:center;}
+#part404 div {margin:50px auto; text-align:center;}
+#part404 p {margin:60px auto; text-align:center; font-size:25px;}
