@@ -224,3 +224,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #about_douban_show .content {text-align:center;}
 #about_douban_show .words {text-align:left; margin:20px;}
 #about_contact {width:300px;}
+#about_contact li {margin:7px 5px;}
+#about_contact .icons {width:21px; margin-bottom:-5px;}
+#about_contact a {color:rgb(128, 128, 128); text-decoration:none;}
+#about_contact a:hover {color:rgb(255, 0, 0);}
