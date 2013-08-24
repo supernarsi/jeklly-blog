@@ -217,10 +217,10 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 
 
 /***********about_me page***********/
-#about_content {width:680px; margin:auto;}
+#about_content {width:720px; margin:auto;}
 #about_content .content { padding:20px;}
 .about_cards {background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204); margin-bottom:30px;}
-#about_douban_show {width:680px;}
+#about_douban_show {width:680px; padding:20px;}
 #about_douban_show .content {text-align:center;}
 #about_douban_show .words {text-align:left; margin:20px;}
 #about_contact {width:300px;}
