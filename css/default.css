@@ -32,7 +32,7 @@ body .hide{display:none;}
 
 
 /***********default settings**********/
-body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;}
+body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px; background:rgb(245, 245, 245);}
 a {color:#4A75B5;text-decoration:none;outline:none;}
 a:hover {text-decoration:underline}
 .entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#000;text-align:center;}
@@ -69,8 +69,8 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 
 .index-content .section { margin:auto 15%; padding-top:80px;}
 
-.index-content .article-list { width:70%; margin:0 auto; }
-.index-content .article-list li { margin-bottom:70px; }
+.index-content .article-list { width:680px; margin:0 auto; background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204); padding:20px}
+.index-content .article-list li { margin-bottom:50px; padding:20px 30px 0;}
 .index-content h2 { font-size:20px; margin-bottom:15px; }
 .index-content h2 a { color:#444 }
 .index-content h2 a:hover { color:rgb(255, 0, 0); text-decoration:none; }
@@ -83,7 +83,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .index-content .artical-cate li a:hover { text-decoration:none; }
 .index-content .artical-cate li.on span{ color:red; }
 
-.index-content .cate-bar { height:3px; width:70%; margin:0 auto;margin-bottom:100px; }
+.index-content .cate-bar { height:3px; width:70%; margin:0 auto;margin-bottom:40px; }
 .index-content #cateBar { display:inline-block; zoom:1; height:3px; background:red; position:relative; width:0; }
 
 /***************Wiki Style*****************/
@@ -200,16 +200,13 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 
 
 /***********category page***********/
-#category_all {width: 500px; left:30%; top:10%; margin:auto; background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204);}
+#category_all {width: 680px; left:30%; top:10%; margin:auto; padding:20px; background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204);}
 #category_all ul{font-size: 16px;}
 #category_all ul li {margin:10px 60px; color:rgb(128, 128, 128);}
 #category_all a:hover {color:rgb(255, 0, 0); text-decoration:none;}
 .category_year {margin:10px 30px; font-size:20px; font-weight:bold;}
-.category_list {margin:40px auto 20px; padding:20px 0; color:rgb(128, 128, 128);}
+.category_list {margin:auto; padding:20px 0; color:rgb(128, 128, 128);}
 .article a {color:rgb(74, 117, 181);}
-#category_nav {text-align:center; font-size:30px; color:rgb(0, 0, 0); margin:30px;}
-#category_nav a {color:rgb(128, 128, 128); font-weight:bold;}
-#category_nav a:hover {text-decoration:none; color:rgb(255, 0, 0);}
 
 
 /***********pagination***********/
@@ -217,3 +214,13 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 .pagination .current_page {color:rgb(255, 0, 0); border-bottom:solid rgb(255, 0, 0); padding:0px 4px;}
 .pagination a {color:rgb(128, 128, 128); padding:0 3px;}
 .pagination a:hover {color:rgb(255, 255, 255); background-color:rgb(255, 0, 0); text-decoration:none;}
+
+
+/***********about_me page***********/
+#about_content {width:680px; margin:auto;}
+#about_content .content { padding:20px;}
+.about_cards {background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204); margin-bottom:30px;}
+#about_douban_show {width:680px;}
+#about_douban_show .content {text-align:center;}
+#about_douban_show .words {text-align:left; margin:20px;}
+#about_contact {width:300px;}
