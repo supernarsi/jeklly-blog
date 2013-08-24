@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    * Author:         Narsi
+    -->
+    <meta charset="utf-8" />
+    <title>南思胡同</title>
+    <meta name="author" content="Narsi" />
+    <meta name="description" content="Narsi's Blog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="" />
+    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="index-content blog">
+    <div class="section">
+        <ul class="artical-cate">
+            <li class="on"><a href="/"><span>杂文</span></a></li>
+            <li style="text-align:center"><a href="/category.html"><span>归档</span></a></li>
+            <li style="text-align:right"><a href="/about.html"><span>于我</span></a></li>
+        </ul>
+
+        <div class="cate-bar"><span id="cateBar"></span></div>
+
+        <ul class="artical-list">
+        
+            <li>
+                <h2><a href="/2011/addicated.html">情有独钟</a></h2>
+                <div class="title-desc">自古即有才子佳人，郎情妾意的说法。金庸笔下杨过，自恃潇洒风流，纵情不羁，觅得牡丹丛，戏蝶杨柳下。而繁花锦簇却难挽浪子心，偏一心系龙女，誓死不负卿。种下情花毒是为她，咽下断肠草是为她，漂泊十六载是为她，舍命断肠崖还是为她，一句英……</div>
+            </li>
+        
+            <li>
+                <h2><a href="/2010/welcome-back.html">嘿你归来</a></h2>
+                <div class="title-desc">我们都驾驶着这样一辆旅车，行驶在各自的道路上，或孤单或同行，或明晰或茫然，朝着心中那个或有或无的目的地前进。读完《1988》，正如书名的「我想和这个世界谈谈」，确实有些东西想表达，算不得感想更谈不……</div>
+            </li>
+        
+            <li>
+                <h2><a href="/2010/sunshine-of-Chongqing.html">日照重庆</a></h2>
+                <div class="title-desc">不似烟雨朦胧的江南水乡般婉约秀气，也不像热情奔放的黄土高原那般粗犷豪迈，重庆人的家乡情怀难以名状，像这座山城常有的大雾，是化不开的浓郁，又像雾散后的晴空，爽朗明媚。这种情怀根深蒂固，不需……</div>
+            </li>
+        
+            <li>
+                <h2><a href="/2008/black-comedy.html">黑色幽默</a></h2>
+                <div class="title-desc">人总是在安静中更容易沉思，就好似在40多度的太阳下曝晒想不流汗也由不得自己，然而发现最近的自己就像内环境失控者，汗腺没反映，周围愈是安静，自己愈是难以平静下来思考，耳旁老是地崩山摧似的轰鸣声……</div>
+            </li>
+        
+        </ul>
+    </div>
+    <div class="aside">
+    </div>
+</div>
+
+<!-- Pagination links -->
+<div class="pagination">
+
+    
+        
+        <a href="/" class="pages">1</a>
+        
+    
+
+    
+        
+        <a href="/page2" class="pages">2</a>
+        
+    
+
+    
+    <span class="current_page">3</span> 
+    
+
+</div>
+
+
+<script type="text/javascript">
+    $(function(){
+        function animateBar($item,noAni){
+            var spanLeft = $item.find('span').offset().left;
+            var conLeft = $item.parent().offset().left;
+            var left = spanLeft - conLeft;
+            var width = $item.find('span').width() + 8;
+
+            if(noAni){
+                $('#cateBar').css({left:left,width:width})
+            }else{
+                $('#cateBar').stop().animate({left:left,width:width},300)
+            }
+        }
+
+        var waitForFinalEvent = (function () {
+            var timers = {};
+            return function (callback, ms, uniqueId) {
+                if (!uniqueId) {
+                    uniqueId = "Don't call this twice without a uniqueId";
+                }
+                if (timers[uniqueId]) {
+                    clearTimeout (timers[uniqueId]);
+                }
+                timers[uniqueId] = setTimeout(callback, ms);
+            };
+        })();
+
+        $('.artical-cate li').mouseenter(function(){
+            animateBar($(this));
+        }).mouseleave(function(){
+            animateBar($('.artical-cate .on'));
+        });
+
+        $(window).resize(function(e){
+            waitForFinalEvent(function(){
+                animateBar($('.artical-cate .on'));
+            })
+        })
+        animateBar($('.artical-cate .on'),true);
+    });
+</script>
+
+    
+    <p id="back-to-top"><a href="#top"><img src="/images/back-to-top.png" alt="back to the top"></a></p>
+    <script src="../js/common.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+            $('.home-follow').click(function(e){
+                e.preventDefault();
+
+                if($('.home-contact').is(':visible')){
+                    $('.home-contact').slideUp(100);
+                }else{
+                    $('.home-contact').slideDown(100);
+                }
+            });
+        })
+    </script>
+    
+    <div id="footer">
+        <div class="copyright">
+            
+            <p>Powered by <a href="https://github.com/mojombo/jekyll" target="_blank">Jekyll</a> and <a href="https://github.com/" target="_blank">GitHub</a>. &copy; Narsi 2013</p>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="/js/prettify/prettify.css" />
+<style type="text/css">
+    body { background:#f5f5f5; }
+    @media screen and (max-width: 750px){
+        body { background:#fff; }
+    }
+    @media screen and (max-width: 1020px){
+        body { background:#fff; }
+    }
+</style>
+
+<div id="content">
+    <div class="left">
+        <a href="javascript:void(0)"><div id="nav_avatars_back"><img id="home_avatar" src="/images/icon/plus.png" class="no"/></div></a> 
+        <div id="nav_avatars">
+            <a href="/"><img class="nav_avatar" id="nav_avatar1" src="/images/icon/1.png" title="主页"/></a>
+            <a href="javascript:void(0)"><img class="nav_avatar" id="nav_avatar2" src="/images/icon/2.png" title="文章"/></a>
+            <a href="/about.html"><img class="nav_avatar" id="nav_avatar3" src="/images/icon/3.png" title="档案"/></a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
+        <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
+        {{ content }}
+        
+        <div id="other_posts" class="left">
+        {% if page.previous %}
+            <span style="text-align:left"><a href={{ page.previous.url}} class="left">旧语： {{ page.previous.title | truncatewords:5 }}</a></span>
+        {% endif %}
+        {% if page.next %}
+            <span style="text-align:right"><a href={{ page.next.url }} class="right">新言： {{ page.next.title | truncatewords:5 }}</a></span>
+        {% endif %}
+        </div>
+
+        <!--加载Disqus评论-->
+        <div style="clear:both" id="disqus">
+            <a id="show_disqus" href="javascript:void(0)">点击查看评论</a>
+            <div id="disqus_thread"></div>
+        </div>
+
+    </div>
+</div>
+
+<div id="floater"></div>
+
+<div id="category">
+    <div class="close_window">
+        <a href="javascript:void(0)"><img src="/images/icon/close.png" alt="关闭窗口" title="关闭"/></a>
+    </div>
+    <ul class="artical-list">
+        <div>最近十篇</div>
+        {% for post in site.posts limit:10%}
+        <li><a href="{{ post.url }}"> {{ post.title }} </a>  <span class="post_time">{{ post.date | date:"%Y-%m-%d" }}</span></li>
+        {% endfor %}
+        <div><a href="/category.html">查看所有文章归档</a></div>
+    </ul>
+</div>

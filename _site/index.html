@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    * Author:         Narsi
+    -->
+    <meta charset="utf-8" />
+    <title>南思胡同</title>
+    <meta name="author" content="Narsi" />
+    <meta name="description" content="Narsi's Blog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="" />
+    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="index-content blog">
+    <div class="section">
+        <ul class="artical-cate">
+            <li class="on"><a href="/"><span>杂文</span></a></li>
+            <li style="text-align:center"><a href="/category.html"><span>归档</span></a></li>
+            <li style="text-align:right"><a href="/about.html"><span>于我</span></a></li>
+        </ul>
+
+        <div class="cate-bar"><span id="cateBar"></span></div>
+
+        <ul class="artical-list">
+        
+            <li>
+                <h2><a href="/2013/to-you.html">远方</a></h2>
+                <div class="title-desc">那日你说要去远方，我默然点头，送你一个拥抱，算作道别。本将天涯两边，近不如远，还可以多些借口来矫情怀念。但真到分别，又止不住悔恨道别太匆匆，止不住懊恼远方太遥远。来不及讲的那些话，就把它们跟……</div>
+            </li>
+        
+            <li>
+                <h2><a href="/2013/Miss-Chen.html">陈小姐</a></h2>
+                <div class="title-desc">陈小姐二十二岁，开心时笑起来特美，仿佛能让人忘掉忧愁。他跟我诉苦，说思念陈小姐，希望留下点什么纪念，却总找不到合适的寄托。于是便跟我讲述了他们的故事。故事很短，记下来算作一种慰藉。和陈小姐的相遇……</div>
+            </li>
+        
+            <li>
+                <h2><a href="/2013/li.html">李美丽</a></h2>
+                <div class="title-desc">故事是听C君讲的，当然他也说是从别处听来，至于故事的源头怕已无从考究，也许起初只是一个玩笑。流言蜚语大抵如此，抓住一个线头，便越扯越远，几番润色后，玩笑也成了栩栩如生的故事……</div>
+            </li>
+        
+            <li>
+                <h2><a href="/2012/far-away.html">遥寄</a></h2>
+                <div class="title-desc">你缓缓展开面前那一方信笺，欲将近来杂乱的思绪慢慢铺陈。但那一潭情绪混得太浓，怎样也引不出一道沟渠，将它化为笔墨，你就这样楞楞地盯着纸上那寥寥数笔，任思绪在胸口冲撞了百十个来回，终于也只是落下“诸事安……</div>
+            </li>
+        
+            <li>
+                <h2><a href="/2012/dawn.html">黎明</a></h2>
+                <div class="title-desc">至今老李想起十年前那场「运动」仍觉心悸，从他口中探出那些尘封的影像着实费了好些功夫。小赵说他可以理解，就像他小时挨多了针头留下心理阴影，以致看到尖物就紧张，可老大偏派他去采稿大头针厂质量造假事件时他……</div>
+            </li>
+        
+        </ul>
+    </div>
+    <div class="aside">
+    </div>
+</div>
+
+<!-- Pagination links -->
+<div class="pagination">
+
+    
+    <span class="current_page">1</span> 
+    
+
+    
+        
+        <a href="/page2" class="pages">2</a>
+        
+    
+
+    
+        
+        <a href="/page3" class="pages">3</a>
+        
+    
+
+</div>
+
+
+<script type="text/javascript">
+    $(function(){
+        function animateBar($item,noAni){
+            var spanLeft = $item.find('span').offset().left;
+            var conLeft = $item.parent().offset().left;
+            var left = spanLeft - conLeft;
+            var width = $item.find('span').width() + 8;
+
+            if(noAni){
+                $('#cateBar').css({left:left,width:width})
+            }else{
+                $('#cateBar').stop().animate({left:left,width:width},300)
+            }
+        }
+
+        var waitForFinalEvent = (function () {
+            var timers = {};
+            return function (callback, ms, uniqueId) {
+                if (!uniqueId) {
+                    uniqueId = "Don't call this twice without a uniqueId";
+                }
+                if (timers[uniqueId]) {
+                    clearTimeout (timers[uniqueId]);
+                }
+                timers[uniqueId] = setTimeout(callback, ms);
+            };
+        })();
+
+        $('.artical-cate li').mouseenter(function(){
+            animateBar($(this));
+        }).mouseleave(function(){
+            animateBar($('.artical-cate .on'));
+        });
+
+        $(window).resize(function(e){
+            waitForFinalEvent(function(){
+                animateBar($('.artical-cate .on'));
+            })
+        })
+        animateBar($('.artical-cate .on'),true);
+    });
+</script>
+
+    
+    <p id="back-to-top"><a href="#top"><img src="/images/back-to-top.png" alt="back to the top"></a></p>
+    <script src="../js/common.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+            $('.home-follow').click(function(e){
+                e.preventDefault();
+
+                if($('.home-contact').is(':visible')){
+                    $('.home-contact').slideUp(100);
+                }else{
+                    $('.home-contact').slideDown(100);
+                }
+            });
+        })
+    </script>
+    
+    <div id="footer">
+        <div class="copyright">
+            
+            <p>Powered by <a href="https://github.com/mojombo/jekyll" target="_blank">Jekyll</a> and <a href="https://github.com/" target="_blank">GitHub</a>. &copy; Narsi 2013</p>
+            
+        </div>
+    </div>
+</body>
+</html>
