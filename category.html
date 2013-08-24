@@ -24,7 +24,7 @@ layout: home
                 {% endif %}
             {% endunless %}
             <li class="article">
-            <span class="datetime">{{ post.date | date:"%B %d, %Y" }} >></span>
+            <span class="datetime">{{ post.date | date:"%m %d, %Y" }}</span>  &raquo; 
             <a href="{{ post.url }}">{{ post.title }}</a>
             </li>
         {% endfor %}
