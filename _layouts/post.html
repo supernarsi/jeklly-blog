@@ -4,7 +4,7 @@ layout: default
 
 <link rel="stylesheet" href="/js/prettify/prettify.css" />
 <style type="text/css">
-    body { background:#f5f5f5; }
+    body { background:rgb(245, 245, 245); }
     @media screen and (max-width: 750px){
         body { background:#fff; }
     }
@@ -52,7 +52,7 @@ layout: default
     <div class="close_window">
         <a href="javascript:void(0)"><img src="/images/icon/close.png" alt="关闭窗口" title="关闭"/></a>
     </div>
-    <ul class="artical-list">
+    <ul class="article-list">
         <div>最近十篇</div>
         {% for post in site.posts limit:10%}
         <li><a href="{{ post.url }}"> {{ post.title }} </a>  <span class="post_time">{{ post.date | date:"%Y-%m-%d" }}</span></li>
