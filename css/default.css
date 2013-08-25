@@ -245,7 +245,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 .poem {margin:20px; letter-spacing:2px; text-align:center; color:rgb(128, 128, 128); text-shadow:2px 3px 6px rgb(195, 195, 195);}
 .poet {width:35%; text-align:right; margin:auto; font-size:15px; color:rgb(128, 128, 128);}
 #about_me {padding:20px 0;}
-#about_me .part1 {margin:20px auto; text-align:left; width:45%; line-height:30px;}
+#about_me .part1 {margin:20px auto; text-align:left; width:35%; line-height:30px;}
 #about_me .part2, .part3{text-align:center; color:rgb(250, 225, 50); }
 .part4 {width:80px; margin:0 10px;}
 .part4 img{float:left; border-radius:50%; width:150px ;height:150px; margin:20% 5px 0;}
