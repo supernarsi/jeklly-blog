@@ -59,7 +59,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .sidenav ul { margin-bottom:50px; }
 .sidenav li { margin-bottom:12px; }
 .sidenav a { color:#555; font-size:14px; display:block;}
-.entry{margin:auto; width:680px; background:#fff; padding:30px; box-shadow:0 2px 6px #ccc; left:23%; z-index:-1;}
+.entry{margin:auto; width:70%; position:relative; background:#fff; padding:30px; box-shadow:0 2px 6px #ccc; z-index:-1;}
 .entry ul{margin-bottom:25px;margin-left:25px;}
 .entry ul li{margin-bottom:5px;list-style:disc;line-height:1.8em;}
 .entry ol{margin-bottom:25px;margin-left:25px;}
@@ -69,7 +69,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 
 .index-content .section { margin:auto 15%; padding-top:80px;}
 
-.index-content .article-list { width:680px; margin:0 auto; background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204); padding:20px}
+.index-content .article-list { width:70%; margin:0 auto; background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204); padding:20px 0;}
 .index-content .article-list li { margin-bottom:50px; padding:20px 30px 0;}
 .index-content h2 { font-size:20px; margin-bottom:15px; }
 .index-content h2 a { color:#444 }
@@ -136,15 +136,22 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 
     .index-content .aside { position:relative; width:100%; height:300px; max-width:none; }
     .index-content .section { margin-left:0; padding-right:0; }
-    .index-content .section ul { width:85%; }
+    /*.index-content .section ul { width:85%; }*/
     .index-content .cate-bar { width:85%; }
     .index-content .artical-cate { margin-top:50px; }
 
     .blog .aside,
     .project .aside,
     .opinion .aside {display:none;background-image:none;}
+    
+    #category {width:270px!important; left:50px!important;}
 }
-
+@media (max-width: 300px){
+    #category {left:10px!important;}
+}
+@media (max-width: 650px){
+    #about_douban_show {display:none;}
+}
 @media (max-width: 1020px){
     #menuIndex {display:none;}
     .home-menu { position:absolute; }
@@ -152,12 +159,17 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     .index-content .article-list,
     .index-content .artical-cate { width:85%; }
     .sidenav {display:none;}
-    .entry {float:none;width:auto;background:transparent;padding:0;box-shadow:none;}
-    #content {width:85%;margin:100px auto 50px; }
+    .entry {float:none; width:auto; background:transparent; padding:0; box-shadow:none; top:100px;}
+    #content {width:85%;margin:20px auto 50px; }
+    
 }
 @media (max-width: 1300px){
     .home-menu { position:absolute; }
 }
+@media (max-width: 1320px){
+    #about_douban_show {float:left!important;}
+}
+
 
 
 /***********back-to-top settings***********/
@@ -166,7 +178,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 
 
 /***********home_avatar***********/
-#home_avatar {width:100px; height:100px; float:left; border-radius:50%; opacity:0;}
+#home_avatar {width:100px; height:100px; position:absolute; border-radius:50%; opacity:0;}
 #nav_avatars {float:left; display:none; z-index:999;}
 #nav_avatars_back { background:url('/images/lion.png') no-repeat; width:100px; height:100px; border-radius:50%; box-shadow:1px 1px 3px rgb(136, 136, 136);}
 .nav_avatar {width:56px; height:56px; border-radius:50%; position:relative; box-shadow:1px 1px 1px rgb(136, 136, 136); float:left;}
@@ -176,14 +188,14 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 
 
 /***********category***********/
-#category {width: 500px; position:fixed; left:30%; top:10%; background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204); display:none; z-index:9999;}
-#category ul div {font-size:16px; color:rgb(128, 128, 128); margin:0 40px 20px;}
-#category ul{font-size: 18px;}
-#category ul li {margin:20px 120px;}
+#category {width: 35%; position:fixed; left:35%; top:10%; background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204); display:none; z-index:9999;}
+#category ul div {font-size:14px; color:rgb(128, 128, 128); margin:0 20px 20px;}
+#category ul{font-size: 16px;}
+#category ul li {margin:20px;}
 #category ul li a {color:rgb(0, 0, 0);}
 #category a:hover {color:red; text-decoration:none;}
 .post_time {font-size:15px; color:gray; font-weight:normal;}
-.close_window img {width:30px; height:30px; position:relative; left:485px; top:-10px; opacity:0.5;}
+.close_window img {width:30px; height:30px; position:relative; left:-10px; top:-10px; opacity:0.5;}
 #floater {width:100%; height:3000px; position:absolute; left:0; top:0; display:none; background:rgb(232, 232, 232); opacity:0.7; z-index:999;}
 
 
@@ -196,13 +208,13 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #disqus a:hover {text-decoration:none; color:rgb(255, 0, 0);}
 
 /***********copyright***********/
-#footer {width:680px; margin:0 auto; text-align:right; font-size:13px; color:rgba(128, 128, 128, 0.6); clear:both;}
+#footer {width:49%; margin:0 auto; text-align:right; font-size:13px; color:rgba(128, 128, 128, 0.6); clear:both;}
 
 
 /***********category page***********/
-#category_all {width: 680px; left:30%; top:10%; margin:auto; padding:20px; background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204);}
+#category_all {width: 70%; left:30%; top:10%; margin:auto; padding:20px 0; background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204);}
 #category_all ul{font-size: 16px;}
-#category_all ul li {margin:10px 60px; color:rgb(128, 128, 128);}
+#category_all ul li {margin:10px 30px; color:rgb(128, 128, 128);}
 #category_all a:hover {color:rgb(255, 0, 0); text-decoration:none;}
 .category_year {margin:10px 30px; font-size:20px; font-weight:bold;}
 .category_list {margin:auto; padding:20px 0; color:rgb(128, 128, 128);}
@@ -210,32 +222,32 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 
 
 /***********pagination***********/
-.pagination {width:680px; margin:0 auto 15px; text-align:right; font-size:13px;}
+.pagination {width:49%; margin:0 auto 15px; text-align:right; font-size:13px;}
 .pagination .current_page {color:rgb(255, 0, 0); border-bottom:solid rgb(255, 0, 0); padding:0px 4px;}
 .pagination a {color:rgb(128, 128, 128); padding:0 3px;}
 .pagination a:hover {color:rgb(255, 255, 255); background-color:rgb(255, 0, 0); text-decoration:none;}
 
 
 /***********about_me page***********/
-#about_content {width:720px; margin:auto;}
-#about_content .content { padding:20px;}
+#about_content {width:70%; margin:auto;}
+#about_content .content { padding:10px;}
 .about_cards {background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204); margin-bottom:30px;}
-#about_douban_show {width:420px; float:right;}
+#about_douban_show {width:400px; float:right;}
 #about_douban_show .content {text-align:center;}
 #about_douban_show .words {text-align:left;}
 #about_douban_show .content  td img{margin:10px 13px; box-shadow:2px 3px 6px rgb(204, 204, 204);}
-#about_contact {width:260px; float:left;}
+#about_contact {width:245px; float:left;}
 #about_contact li {margin:7px 5px;}
 #about_contact .icons {width:21px; margin-bottom:-5px;}
 #about_contact a {color:rgb(128, 128, 128); text-decoration:none;}
 #about_contact a:hover {color:rgb(255, 0, 0);}
-#about_poem {width:680px; padding:20px;}
+#about_poem {padding:20px 0;}
 .poem {margin:20px; letter-spacing:2px; text-align:center; color:rgb(128, 128, 128); text-shadow:2px 3px 6px rgb(195, 195, 195);}
-.poet {width:250px; text-align:right; margin:auto; font-size:15px; color:rgb(128, 128, 128);}
-#about_me {width:680px; padding:20px;}
-#about_me .part1 {margin:20px auto; text-align:left; width:300px; line-height:30px;}
-#about_me .part2, .part3{text-align:center; color:rgb(210, 21, 210); }
-.part4 {width:80px;}
+.poet {width:35%; text-align:right; margin:auto; font-size:15px; color:rgb(128, 128, 128);}
+#about_me {padding:20px 0;}
+#about_me .part1 {margin:20px auto; text-align:left; width:45%; line-height:30px;}
+#about_me .part2, .part3{text-align:center; color:rgb(250, 225, 50); }
+.part4 {width:80px; margin:0 10px;}
 .part4 img{float:left; border-radius:50%; width:150px ;height:150px; margin:20% 5px 0;}
 
 
