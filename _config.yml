@@ -10,8 +10,11 @@ plugins:     ./_plugins
 
 future:      true
 lsi:         false
-pygments:    true
+pygments:    false
 markdown:    rdiscount
+
+redcarpet:
+  extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
 
 maruku:
   use_tex:    false
@@ -38,7 +41,7 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: style
 
-permalink:    /:title.html
+permalink:    /:title
 
 title:        narsi's blog
 alt:          南思胡同

@@ -95,4 +95,12 @@ $(function(){
         var that = this;
         $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
     });
+    
+    //添加Google-code-preffity需要的class
+    $('pre').addClass('prettyprint linenums');
+    
+    $.getScript('/js/prettify/prettify.js',function(){
+        prettyPrint();
+    });
 })
+
