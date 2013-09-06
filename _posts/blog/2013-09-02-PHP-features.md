@@ -1,12 +1,12 @@
 ---
 layout: post
-title: PHP特性小结<转>
+title: PHP特性小结（转）
 category: tech
 description: 之前看到一篇Blog总结了一些PHP的特性，感觉很实用，在这里转帖做一下存档。
 ---
 之前看到一篇Blog总结了一些PHP的特性，感觉很实用，在这里转帖做一下存档。
 
-原作者是[Limboy | 无网不剩]('http://blog.leezhong.com', 'Limboy|无网不剩')。
+原作者是[Limboy | 无网不剩](http://blog.leezhong.com 'Limboy|无网不剩')。
 
 原文如下：<hr />
 
