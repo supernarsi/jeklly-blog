@@ -41,8 +41,6 @@ DELETE 时，InnoDB 为删除的每一行保存当前系统版本号作为行删
 
 UPDATE 时，InnoDB 为插入一行新纪录，保存当前系统版本号作为行版本号，同时保存当前系统版本号到原来的行作为行删除标识。
 
----
-
 ##存储引擎
 **查看表信息**
 
@@ -92,31 +90,27 @@ MyISAM 是 MySQL 5.1 及之前版本的默认存储引擎，主要有以下一�
 
 多种方法可以转换表的存储引擎：
 
-1.	**ALTER TABLE**
++	**ALTER TABLE**
 
-    最简单的方法是使用 `ALTER TABLE` 语句，如将 test 表修改为 MyISAM 可使用下面的语句：
+最简单的方法是使用 `ALTER TABLE` 语句，如将 test 表修改为 MyISAM 可使用下面的语句：
 
 		mysql> ALTER TABLE test_table ENGINE = InnoDB;
++	**导入导出**
 
-2.	**导入导出**
+可使用工具 dump 出数据表到文件，修改文件中 CREATE TABLE 语句中的存储引擎项，同时需要修改表名。
 
-	可使用工具 dump 出数据表到文件，修改文件中 CREATE TABLE 语句中的存储引擎项，同时需要修改表名。
++	**创建查询**
 
-3.	**创建查询**
-
-	原理是创建一个新表，再将原表数据导入到新表。数据量小时可以使用下面的语句：
+原理是创建一个新表，再将原表数据导入到新表。数据量小时可以使用下面的语句：
 
 		mysql> CREATE TABLE innodb_table LIKE myisam_table;
 		mysql> ALTER TABLE innodb_table ENGINE = InnoDB;
 		mysql> INSERT INTO innodb_table SELECT * FROM myisam_table;
-
-	但如果数据量大，这样执行可能会导致事务产生大量 undo，因此可以考虑使用事务分批处理（假设有主键 id，最小值为 x，最大值为 y）：
+但如果数据量大，这样执行可能会导致事务产生大量 undo，因此可以考虑使用事务分批处理（假设有主键 id，最小值为 x，最大值为 y）：
 
 		mysql> START TRANSACTION;
 		mysql> INSERT INTO innodb_table SELECT * FROM myisam_table WHERE id BETWEEN x AND y;
 		mysql> COMMIT;
-
----
 
 ##基准测试
 **策略**
@@ -138,17 +132,214 @@ MyISAM 是 MySQL 5.1 及之前版本的默认存储引擎，主要有以下一�
 
 单组件式工具：mysqlslap、MySQL Benchmark Suite、Super Smack、Database Test Suit 等。
 
----
-
 ##数据类型优化
 数据类型的选择应该遵守几个原则：
 
 +	尽量使用正确存储的最小数据类型。因为它们占用更少的磁盘、内存和 CPU 缓存。
-
 +	选择简单的数据类型。例如整型比字符串操作代价更低。注意应该使用 MySQL 内建的类型如 date， time 等来存储日期和时间，使用整型来存储 IP 地址。
-
 +	避免使用 NULL。通常情况下应该指定列为 NOT NULL。否则可能导致索引更复杂。
 
 **整型**
 
 整数类型包括整数和实数存储。证书可以使用这几种类型：TINYINT， SMALLINT， MEDIUMINT， INT， BIGINT，他们分别使用8、16、24、32、64位存储空间，可存储值的范围从 -2<sup>N-1</sup> 到 2<sup>N-1</sup>-1 ，其中 N 表示存储空间的位数。如果使用 UNSIGNED 属性，可以使正数上限提高一倍。例如 TINYINT UNSIGNED 的存储范围是 0 到 255。整数类型的存储宽度，其实对于存储和计算并无意义，只是表示显示字符的长度，但计算还是以真是存储值为准。
+
+DECIMAL 用于存储精确的小数。MySQL 5.0 和更高版本将数字打包保存到一个二进制字符串中（每 4 个字节存 9 个数字）。例如 DECIMAL(18,9) 小数点两边将各存储 9 个数字，一共使用 9 个字节：小数点前的数字用 4 个字节，小数点后的数字用 4 个字节，小数点本身占 1 个字节。MySQL 5.0 及更高版本中 DECIAML 类型允许最多 65 个数字。
+
+浮点类型存储同样范围值时，比 DECIAML 使用更少的空间。FLOAT 使用 4 个字节存储，DOUBLE 使用 8 个字节。
+
+因为需要额外空间和计算开销，应在只对小数进行精确计算时才采用 DECIMAL 类型。
+
+**字符串类型**
+
+VARCHAR 用于存储可变长字符串，比定长类型节省空间。VARCHAR 需要使用额外 1 或 2 个字节记录字符串长度（小于或等于 225 字节使用 1 个字节表示，否则使用 2 个字节）。UPDATE 操作时，会有额外开销。适用场合包括：字符串列的最大长度比平均长度大很多；列更新少；使用类似 UTF-8 这样复杂的字符集，每个字符都用不同长度字节存储。
+
+CHAR 是定长的，MySQL 总是根据定义的字符串长度分配空间。MySQL 会删除 CHAR 类型数据所有的末尾空格。适用场合包括：很短的字符串；所有值都接近同一长度的字符串；经常 UPDATE 的数据。密码的 MD5 值适合使用 CHAR 存储。
+
+**日期和时间**
+
+日期有两种类型：DATETIME 和 TIMESTAMP。
+
+DATETIME 可表示的范围从 1001 年到 9999 年，精度为秒。与时区无关，使用 8 字节存储。
+
+TIMESTAMP 保存从 1970 年 1 月 1 日零点以来的秒数，即时间戳。依赖时区，使用 4 字节存储。MySQL 提供 FROM_UNIXTIME() 函数将 Unix 时间戳转换为日期，提供 UNIX_TIMESTAMP() 函数把日期转换为 Unix 时间戳。TIMESTAMP 默认为 NOT NULL。
+
+**范式**
+
+范式更新操作更快；更少的数据重复和冗余；范式化的表通常更小，可更好放于内存，操作更快；更少使用 DISTINCT 或者 GROUP 语句。
+
+反范式化可以将所有数据存于一张表，避免关联；更有效的索引策略。
+
+实际项目中视情况混用二者。
+  
+##索引
+索引是一种数据结构。索引优点在于大大减小服务器扫描的数据量，帮助服务器避免顺序和临时表，可以将随机 I/O 变为顺序 I/O。
+
+**B-Tree**
+
+B-Tree 适用于全键值、键值范围或键前缀查找。其中键前缀查找只适用于根据最左前缀的查找。
+
+限制：
+
++	如果不是按索引的最左列开始查找，则无法索引。
++	不能跳过索引中的列。
++	如果查询中有某个列的查找范围，则其右边所有列都无法使用索引优化查找。例如，查询 `WHERE last_name = 'Simth' AND first_name LIKE 'J%' AND dob = '1976-12-23'` ，则这个查询只能使用索引的前两列。
+
+**哈希索引**
+
+基于哈希表实现，只有精确匹配索引所有列的查询才有效。MySQL 中只有 Memory 引擎显示支持哈希索引。
+
+假设有如下表：
+
+	CREATE TABLE testhash(
+		fname VARCHAR(50) NOT NULL,
+		lname CARCHAR(50) NOT NULL,
+		KEY USING HASH(fname)
+	) ENGINE=MEMORY;
+
+表中有如下数据：
+
+	mysql> SELECT * FROM testhash;
+	+-------+----------+
+	| fname | lname    |
+	+-------+----------+
+	| Arjen | Lentz    |
+	| Baron | Schwartz |
+	| Ray   | Allen    |
+	| Peter | James    |
+	+-------+----------+
+	4 rows in set (0.00 sec)
+
+假设使用某哈希函数f()，返回如下值（非真实数据）：
+
+	f('Arjen') = 2323
+	f('Baron') = 7414
+	f('Ray') = 8974
+	f('Peter') = 2413
+
+则哈希索引数据结构如下：
+
+	Slot	Value
+	232		指向第 1 行的指针
+	2413	指向第 4 行的指针
+	7414	指向第 2 行的指针
+	8974	指向第 3 行的指针
+
+执行如下查询：
+
+	mysql> SELECT lname FROM testhash WHERE fname = 'Peter';
+
+MySQL先计算 Peter 的哈希值，并使用该值寻找对应记录指针。找到 f('Peter') = 2413 后在索引中查找 2413，最后找到对应第 4 行的指针。
+
+限制：
+
++	索引只包含哈希值和行指针，不存储字段值，所以无法使用索引值来避免读行。
++	无法排序。
++	不支持部分索引匹配查找。
++	只支持等值比较查询。不支持任何范围查询。
++	出现哈希冲突时，遍历链表中所有行指针。维护操作代价高。
+
+InnoDB 有「自适应哈希索引」的功能。
+
+**全文索引**
+
+全文索引查找文本中的关键词而不是直接比较索引中的值。适用于 MATCH AGAINST 操作而不是普通的 WHERE 条件查询。
+  
+##高性能索引
+**独立列**
+
+索引列不可以是表达式的一部分，也不能是函数参数。例如下面的这些查询都将无法正常使用索引：
+
+	mysql> SELECT actor_id FROM test_table WHERE actor_id + 1 = 5;
+	mysql> SELECT ... WHERE TO_DAYS(CURRENT_DATE) - TO_DAYS(date_col) <= 10;
+
+**前缀索引**
+
+只索引部分字符可以节省索引空间，以提高效率。对于 BLOB 或 TEXT 或者很长的 VARCHAR 类型的列只有使用前缀索引。
+
+需要在足够长（保证足够高的选择性）和不能过长（保证索引效率）之间寻求平衡。
+
+例如有如下表数据：
+
+	mysql> SELECT COUNT(*) AS cnt, city_table FROM city GROUP BY city
+	-> ORDER BY cnt DESC LIMIT 10; 
+	+--------+-------------+
+	|  cnt   |   city      |
+	+--------+-------------+
+	|   65   |   London    |
+	|   49   |   Hiroshima |
+	|   48   |   Teboksary |
+	|   48   |   Pak Kret  |
+	|   48   |   Yaound    |
+	|   47   |   Tel Aviv  |
+	|   47   |   Shimoga   |
+	|   45   |   Cabuyao   |
+	|   45   |   Callao    |
+	|   45   |   Bislig    |
+	+--------+-------------+
+
+通过 3 个前缀字母索引查找：
+
+	mysql> SELECT COUNT(*) cnt, LEFT(city, 3) AS pref FROM city_table
+	-> GROUP BY pref ORDER BY cnt DESC LIMIT 10;
+	+--------+-------+
+	|  cnt   |  pref |
+	+--------+-------+
+	|  483   |  San  |
+	|  195   |  Cha  |
+	|  177   |  Tan  |
+	|  167   |  Sou  |
+	|  163   |  al-  |
+	|  163   |  Sal  |
+	|  146   |  Shi  |
+	|  136   |  Hal  |
+	|  130   |  Val  |
+	|  129   |  Bat  |
+	+--------+-------+
+
+因为每个前缀都比原城市多，因此唯一前缀比唯一城市少很多。增加前缀长度至 7 后查找结果如下：
+
+	mysql> SELECT COUNT(*) cnt, LEFT(city, 7) AS pref FROM city_table
+	-> GROUP BY pref ORDER BY cnt DESC LIMIT 10;
+	+--------+-------------+
+	|  cnt   |   pref      |
+	+--------+-------------+
+	|   70   |   Santiag   |
+	|   68   |   San Fel   |
+	|   65   |   London    |
+	|   61   |   Valle d   |
+	|   49   |   Hiroshi   |
+	|   48   |   Teboksa   |
+	|   48   |   Pak Kre   |
+	|   48   |   Yaound    |
+	|   47   |   Tel Avi   |
+	|   47   |   Shimoga   |
+	+--------+-------------+
+
+计算完整列的选择性方式如下：
+
+	mysql> SELECT COUNT(DISTINCT city)/COUNT(*) FROM city_table;
+	+---------------------------------+
+	|  COUNT(DISTINCT city)/COUNT(*)  |
+	+---------------------------------+
+	|                         0.0312  |
+	+---------------------------------+
+
+在同一个查询中计算不同前缀长度的选择性：
+
+	mysql> SELECT COUNT(DISTINCT LEFT(city, 3))/COUNT(*) AS sel3,
+	->	COUNT(DISTINCT LEFT(city, 4))/COUNT(*) AS sel4,
+	->	COUNT(DISTINCT LEFT(city, 5))/COUNT(*) AS sel5,
+	->	COUNT(DISTINCT LEFT(city, 6))/COUNT(*) AS sel6,
+	->	COUNT(DISTINCT LEFT(city, 7))/COUNT(*) AS sel7
+	-> FROM city_table;
+	+--------+--------+--------+--------+--------+
+	|  sel3  |  sel4  |  sel5  |  sel6  |  sel7  |
+	+--------+--------+--------+--------+--------+
+	| 0.0239 | 0.0293 | 0.0305 | 0.0309 | 0.0310 |
+	+--------+--------+--------+--------+--------+
+
+创建前缀索引：
+
+	mysql> ALTER TABLE city_table ADD KEY(city(7));
+
+前缀索引缺点在于无法做 ORDER BY 和 GROUP BY，也无法使用前缀索引做覆盖扫描。

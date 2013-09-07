@@ -28,7 +28,7 @@ layout: default
         <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
         {{ content }}
         
-        <div id="other_posts" class="left">
+        <div id="other_posts">
         {% if page.previous %}
             <span style="text-align:left"><a href={{ page.previous.url}} class="left">旧语： {{ page.previous.title | truncatewords:5 }}</a></span>
         {% endif %}
