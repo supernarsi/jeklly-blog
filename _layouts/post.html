@@ -55,7 +55,7 @@ layout: default
     <ul class="article-list">
         <div>最近十篇</div>
         {% for post in site.posts limit:10%}
-        <li><a href="{{ post.url }}"> {{ post.title }} </a>  <span class="post_time">{{ post.date | date:"%Y-%m-%d" }}</span></li>
+        <li><span class="post_time">{{ post.date | date:"%Y-%m-%d" }} &raquo;</span><a href="{{ post.url }}"> {{ post.title }} </a></li>
         {% endfor %}
         <div><a href="/category.html">查看所有文章归档</a></div>
     </ul>
