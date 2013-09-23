@@ -166,7 +166,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     
 }
 @media (max-width: 1300px){
-    .home-menu { position:absolute; }
+    .home-menu {position:absolute; }
 }
 @media (max-width: 1320px){
     #about_douban_show {float:left!important;}
