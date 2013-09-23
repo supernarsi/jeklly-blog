@@ -205,7 +205,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #other_posts {width:97%; margin:10px auto;}
 #other_posts a {font-size:14px; color:rgb(128, 128, 128);}
 #other_posts a:hover {text-decoration:none;}
-#disqus {padding:20px 30px; border-top:solid thin rgb(232, 232, 232); text-align:center;}
+#disqus {padding:20px 0; border-top:solid thin rgb(232, 232, 232); text-align:center;}
 #disqus a {color:rgb(128, 128, 128)}
 #disqus a:hover {text-decoration:none; color:rgb(255, 0, 0);}
 
