@@ -13,6 +13,9 @@ lsi:         false
 pygments:    false
 markdown:    rdiscount
 
+redcarpet:
+  extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
+
 maruku:
   use_tex:    false
   use_divs:   false
