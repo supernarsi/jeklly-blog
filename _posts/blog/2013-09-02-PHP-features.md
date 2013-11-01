@@ -2,19 +2,19 @@
 layout: post
 title: PHP特性小结（转）
 category: tech
-description: 之前看到一篇Blog总结了一些PHP的特性，感觉很实用，在这里转帖做一下存档。
+description: 之前看到一篇 Blog 总结了一些 PHP 的特性，感觉很实用，在这里转帖做一下存档。
 ---
-之前看到一篇Blog总结了一些PHP的特性，感觉很实用，在这里转帖做一下存档。
+之前看到一篇 Blog 总结了一些 PHP 的特性，感觉很实用，在这里转帖做一下存档。
 
-原作者是[Limboy | 无网不剩](http://blog.leezhong.com 'Limboy|无网不剩')。
+原作者是 [Limboy | 无网不剩](http://blog.leezhong.com 'Limboy|无网不剩')。
 
 原文如下：<hr />
 
-其实就是总结了一下[这个帖子](http://stackoverflow.com/questions/61401/hidden-features-of-php)。
+其实就是总结了一下 [这个帖子](http://stackoverflow.com/questions/61401/hidden-features-of-php)。
 
 ##文档
 
-PHP文档的特点：
+PHP 文档的特点：
 
 +	浏览方便
 +	用户评论是一大亮点
@@ -23,11 +23,11 @@ PHP文档的特点：
 
 ##数组
 
-PHP的数组是我用过的语言中最强大的，其实就是个有序映射表(ordered map)，并为各种使用作了优化。可以看作列表、哈希表、字典、集合、栈、队列。
+PHP 的数组是我用过的语言中最强大的，其实就是个有序映射表(ordered map)，并为各种使用作了优化。可以看作列表、哈希表、字典、集合、栈、队列。
 
 ##流处理
 
-可以扩展文件流，比如excel流处理，可以通过下面的语句来创建一个excel文件
+可以扩展文件流，比如 excel 流处理，可以通过下面的语句来创建一个 excel 文件
 
 	<?php
 		$fp = fopen("xlsfile://tmp/test.xls", "wb");
@@ -60,7 +60,7 @@ PHP的数组是我用过的语言中最强大的，其实就是个有序映射�
 
 ##spl\_autoload\_register
 
-使用spl\_autoload\_register，而不是__autoload，因为spl\_autoload\_register允许设置多个实例，而不会覆盖。
+使用spl\_autoload\_register，而不是 __autoload，因为 spl\_autoload\_register 允许设置多个实例，而不会覆盖。
 
 	<?php
 	spl_autoload_register('autoloader');
@@ -71,7 +71,7 @@ PHP的数组是我用过的语言中最强大的，其实就是个有序映射�
 
 ##set\_include\_path
 
-设置引用路径，比如引用zend的libraries时。
+设置引用路径，比如引用 zend 的 libraries 时。
 
 	<?php
 	set_include_path(get_include_path() . PATH_SEPARATOR . '../libs/');
@@ -83,11 +83,11 @@ PHP的数组是我用过的语言中最强大的，其实就是个有序映射�
 	$str = file_get_contents('http://example.com/file');
 	$imageInfo = getimagesize('ftp://user:password@ftp.example.com/image/name.jpg');
 
-虽然这些函数的健壮性和稳定性不如curl，但毕竟使用方便。
+虽然这些函数的健壮性和稳定性不如 curl，但毕竟使用方便。
 
 ##strtr
 
-使用方便，效率高，用来替换字符串内的特定值。有点类似str_replace，但更灵活。
+使用方便，效率高，用来替换字符串内的特定值。有点类似 str_replace，但更灵活。
 
 	<?php
 	echo strtr('hello world', array('world' => 'hell'));
@@ -116,7 +116,7 @@ PHP的数组是我用过的语言中最强大的，其实就是个有序映射�
 
 ##cli
 
-command line interface，可以在命令行里运行php脚本，用来处理日常任务也非常方便。对了别忘了一个非常有用的参数 -a，进入交互模式
+command line interface，可以在命令行里运行 PHP 脚本，用来处理日常任务也非常方便。对了别忘了一个非常有用的参数 -a，进入交互模式
 
 	<?php
 	php -a
@@ -126,7 +126,7 @@ command line interface，可以在命令行里运行php脚本，用来处理日�
 
 ##载入的文件可以有返回值
 
-这个比.ini文件更加灵活，你可以在文件里运行一段程序后，返回运行结果
+这个比 .ini 文件更加灵活，你可以在文件里运行一段程序后，返回运行结果
 
 	<?php
 	// config.php
@@ -202,14 +202,14 @@ command line interface，可以在命令行里运行php脚本，用来处理日�
 
 ##函数参数类型提示
 
-相对于其他编程语言(java/c#)，php这块比较弱，只能判断数组和对象
+相对于其他编程语言(java/c#)，PHP 这块比较弱，只能判断数组和对象
 
 	<?php
 	function foo ( array $param0, stdClass $param1 );
 
 ##数组合并
 
-不用array_merge，而是使用’+’，使用更方便，也更易理解。在处理默认值和用户定义值时尤为方便。
+不用 array_merge，而是使用'+'，使用更方便，也更易理解。在处理默认值和用户定义值时尤为方便。
 
 	<?php
 	// Set the normal defaults.
@@ -219,7 +219,7 @@ command line interface，可以在命令行里运行php脚本，用来处理日�
 
 ##输出缓冲
 
-使用ob_start，关键是ob_start还支持callback，真是太贴心了。
+使用 ob_start，关键是 ob_start 还支持 callback，真是太贴心了。
 
 	<?php
 	function censor($text) {
@@ -246,7 +246,7 @@ reflection，很强大，基本上能还原一个类的实际面貌。
 
 ##快速向数组添加元素
 
-如果是追加一个元素的话，推荐使用这种方法，而不是array_push
+如果是追加一个元素的话，推荐使用这种方法，而不是 array_push
 
 	<?php
 	$arr = array();
@@ -259,7 +259,7 @@ reflection，很强大，基本上能还原一个类的实际面貌。
 	<?php
 	serialize / unserialize
 
-**json支持**
+**json 支持**
 
 	<?php
 	json_encode / json_decode
