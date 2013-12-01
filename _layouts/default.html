@@ -5,28 +5,18 @@
     * Author:         Narsi
     -->
     <meta charset="utf-8" />
-    <title>{% if page.title %}{{ page.title }} {% else %}{{ site.title }}{% endif %}</title>
+    <title></title>
     <meta name="author" content="Narsi" />
     <meta name="description" content="Narsi's Blog" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="/css/default.css" type="text/css" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
     <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
 </head>
 <body>
 
     {{ content }}
-    
-    <p id="back-to-top"><a href="#top"><img src="/images/back-to-top.png" alt="back to the top"></a></p>
-    
-    <div id="footer">
-        <div class="copyright">
-            {% for line in site.copyright %}
-            <p>{{ line }}</p>
-            {% endfor %}
-        </div>
-    </div>
+
     <!--统计代码-->
     </div>
  </body>
