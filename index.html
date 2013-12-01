@@ -23,18 +23,3 @@ layout: home
     <div class="aside">
     </div>
 </div>
-
-<!-- Pagination links -->
-<div class="pagination">
-{% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-    <span class="current_page">{{page}}</span> 
-    {% else %}
-        {% if page == 1 %}
-        <a href="/" class="pages">{{page}}</a>
-        {% else %}
-        <a href="/page{{page}}" class="pages">{{page}}</a>
-        {% endif %}
-    {% endif %}
-{% endfor %}
-</div>
