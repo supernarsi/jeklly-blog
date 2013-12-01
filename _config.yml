@@ -48,3 +48,4 @@ copyright:
   - Powered by <a href="https://github.com/mojombo/jekyll" target="_blank">Jekyll</a> and <a href="https://github.com/" target="_blank">GitHub</a>. &copy; Narsi 2013
 
 paginate: 5    //每页显示数
+//paginate_path: "index/page:num"
