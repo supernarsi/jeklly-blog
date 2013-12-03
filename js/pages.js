@@ -51,12 +51,12 @@
                 var $page_content = $("<span></span>");
                 $($position).after($page_container.html($page_content));
                 var $page_content_html = "<span class='pages_total'>共 " + $pages_total + " 页 </span> ";
-                $page_content_html += "<span class='jquery_pages_first'><a href='javascript:void(0)' class='jquery_pages_first'>首页</a></span> ";
-                //$page_content_html += "<a href='javascript:void(0)' class='jquery_pages_prevpage'>前页</a> ";
+                $page_content_html += "<span class='jquery_pages_first'><a href='javascript:void(0)' class='jquery_pages_first'>&#171;</a></span> ";
+                $page_content_html += "<a href='javascript:void(0)' class='jquery_pages_prevpage'>&#139;</a> ";
 
                 //前几页的样式
-                if($cur_page < Math.ceil($pages_shownum/2)){
-                    for(var i = 1; i < $pages_shownum+1; i++){
+                if($cur_page < Math.ceil($pages_shownum / 2)){
+                    for(var i = 1; i < $pages_shownum + 1; i++){
                         if(i == $cur_page){
                             $page_content_html += " <span class='current_page'>" + $page + "</span> ";
                             continue;
@@ -66,7 +66,7 @@
                 }
 
                 //后几页的样式
-                else if($cur_page > $pages_total-Math.floor($pages_shownum/2)){
+                else if($cur_page > $pages_total - Math.floor($pages_shownum / 2)){
                     for(var i = $pages_total-$pages_shownum+1; i < $pages_total+1; i++){
                         if(i == $cur_page){
                             $page_content_html += " <span class='current_page'>" + $page + "</span> ";
@@ -88,8 +88,8 @@
                         $page_content_html += " <a href='javascript:void(0)' class='to_page'>" + parseInt(i) + "</a> ";
                     }
                 }
-                //$page_content_html += " <a href='javascript:void(0)' class='jquery_pages_nextpage'>后页</a> ";
-                $page_content_html += " <span class='jquery_pages_last'> <a href='javascript:void(0)' class='jquery_pages_last'>尾页</a></span>";
+                $page_content_html += " <a href='javascript:void(0)' class='jquery_pages_nextpage'>&#155;</a> ";
+                $page_content_html += " <span class='jquery_pages_last'> <a href='javascript:void(0)' class='jquery_pages_last'>&#187;</a></span>";
 
                 $page_content_html += " <span class='to_nth_page'>转到第 <input type='text' id='to_nth_page'> 页</span> ";
                 $page_content.html($page_content_html);
