@@ -41,7 +41,7 @@ $(function(){
                 left: '-90px', top: '+50px'
                 },'normal');
             $("#home_avatar").attr('class', 'yes');
-            // 图片旋转45°
+            // 图片旋转 45°
             $("#home_avatar").attr('style', '-webkit-transform:rotate(45deg);');
         }
         else{
@@ -87,7 +87,8 @@ $(function(){
     });
 })
 
-// disqus加载
+// Disqus 加载
+/*
 $(function(){
     $("#show_disqus").click(function(){
         window.disqus_shortname = 'narsi'; 
@@ -96,11 +97,22 @@ $(function(){
         $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
     });
     
-    //添加Google-code-preffity需要的class
+    //添加 Google-code-preffity 需要的 class
     $('pre').addClass('prettyprint linenums');
     
     $.getScript('/js/prettify/prettify.js',function(){
         prettyPrint();
     });
 })
+*/
 
+// 多说
+var duoshuoQuery = {short_name:"narsi"};
+(function(){
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
