@@ -12,7 +12,7 @@ layout: home
         <div class="cate-bar"><span id="cateBar"></span></div>
 
         <ul class="article-list">
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
             <li class="jquery_pages">
                 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
                 <div class="title-desc">{{ post.description }}</div>
@@ -29,12 +29,11 @@ layout: home
 
 <script type="text/javascript">
 $(function(){
-        $(".jquery_pages").pages({'pernum': 5, 'pages': 5, 'position': '.insert', 'extremity': true, 'total': false , 'nth_page': false});
+        //$(".jquery_pages").pages({'pernum': 5, 'pages': 5, 'position': '.insert', 'extremity': true, 'total': false , 'nth_page': false});
 })
 </script>
 
 <!-- Pagination links -->
-<!--
 <div class="pagination">
 {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
@@ -48,4 +47,3 @@ $(function(){
     {% endif %}
 {% endfor %}
 </div>
--->
