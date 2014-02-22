@@ -17,15 +17,6 @@ $(function(){
     });
 });
 
-/*
-$(function(){
-    //tips插件
-    $("a").tips();
-    //翻页插件
-    //$(".jquery_pages").pages({'pernum': 5, 'pages': 5, 'extremity': true, 'total': true});
-})
-*/
-
 $(function(){
     // 展示环形菜单
     $("#home_avatar").click(function(){
@@ -85,16 +76,19 @@ $(function(){
         $("#floater").fadeOut("fast");
         $(document.body).css({"overflow":"scroll"});
     });
-})
+});
 
 // Disqus 加载
 $(function(){
 //    $("#show_disqus").click(function(){
+    // 有评论框时才加载
+    if($("#disqus_thread").length > 0){
         window.disqus_shortname = 'narsi'; 
         $(this).html('加载中...');
         var that = this;
         $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
- //   });
+    }
+    //});
 
     //添加 Google-code-preffity 需要的 class
     $('pre').addClass('prettyprint linenums');
@@ -102,18 +96,4 @@ $(function(){
     $.getScript('/js/prettify/prettify.js',function(){
         prettyPrint();
     });
-})
-
-
-// 多说
-/*
-var duoshuoQuery = {short_name:"narsi"};
-(function(){
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-*/
+});
