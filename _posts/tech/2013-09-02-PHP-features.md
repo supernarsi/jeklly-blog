@@ -60,7 +60,7 @@ PHP 的数组是我用过的语言中最强大的，其实就是个有序映射�
 
 ##spl\_autoload\_register
 
-使用spl\_autoload\_register，而不是 __autoload，因为 spl\_autoload\_register 允许设置多个实例，而不会覆盖。
+使用 spl\_autoload\_register，而不是 __autoload，因为 spl\_autoload\_register 允许设置多个实例，而不会覆盖。
 
     <?php
     spl_autoload_register('autoloader');
