@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PHP特性小结（转）
+title: PHP 特性小结（转）
 category: tech
 description: 之前看到一篇 Blog 总结了一些 PHP 的特性，感觉很实用，在这里转帖做一下存档。
 ---
@@ -29,59 +29,59 @@ PHP 的数组是我用过的语言中最强大的，其实就是个有序映射�
 
 可以扩展文件流，比如 excel 流处理，可以通过下面的语句来创建一个 excel 文件
 
-	<?php
-		$fp = fopen("xlsfile://tmp/test.xls", "wb");
-		if (!is_resource($fp)) { 
-    		die("Cannot open excel file");
-		}
+    <?php
+        $fp = fopen("xlsfile://tmp/test.xls", "wb");
+        if (!is_resource($fp)) { 
+            die("Cannot open excel file");
+        }
 
-		$data= array(
-		    array("Name" => "Bob Loblaw", "Age" => 50),  
-		    array("Name" => "Popo Jijo", "Age" => 75),  
-		    array("Name" => "Tiny Tim", "Age" => 90)
-		); 
+        $data= array(
+            array("Name" => "Bob Loblaw", "Age" => 50),  
+            array("Name" => "Popo Jijo", "Age" => 75),  
+            array("Name" => "Tiny Tim", "Age" => 90)
+        ); 
 
-		fwrite($fp, serialize($data));
-		fclose($fp);
+        fwrite($fp, serialize($data));
+        fclose($fp);
 
 ##魔术方法
 
-	<?php
-		public function __get($key) { ... }
-		public function __set($key, $value) { ... }
-		public function __call($func, $args) { ... }
-		public function __toString() { ... }
-		//...
+    <?php
+        public function __get($key) { ... }
+        public function __set($key, $value) { ... }
+        public function __call($func, $args) { ... }
+        public function __toString() { ... }
+        //...
 
 ##or/and
 
-	<?php
-	isset($foo) OR print '$foo is not defined';
+    <?php
+    isset($foo) OR print '$foo is not defined';
 
 ##spl\_autoload\_register
 
 使用spl\_autoload\_register，而不是 __autoload，因为 spl\_autoload\_register 允许设置多个实例，而不会覆盖。
 
-	<?php
-	spl_autoload_register('autoloader');
-	function autoloader($class)
-	{
-		//这里可以对$class进行处理
-	}
+    <?php
+    spl_autoload_register('autoloader');
+    function autoloader($class)
+    {
+        //这里可以对$class进行处理
+    }
 
 ##set\_include\_path
 
 设置引用路径，比如引用 zend 的 libraries 时。
 
-	<?php
-	set_include_path(get_include_path() . PATH_SEPARATOR . '../libs/');
+    <?php
+    set_include_path(get_include_path() . PATH_SEPARATOR . '../libs/');
 
 ##处理远程文件/url
 
-	<?php
-	$fp = fopen('http://example.com');
-	$str = file_get_contents('http://example.com/file');
-	$imageInfo = getimagesize('ftp://user:password@ftp.example.com/image/name.jpg');
+    <?php
+    $fp = fopen('http://example.com');
+    $str = file_get_contents('http://example.com/file');
+    $imageInfo = getimagesize('ftp://user:password@ftp.example.com/image/name.jpg');
 
 虽然这些函数的健壮性和稳定性不如 curl，但毕竟使用方便。
 
@@ -89,148 +89,148 @@ PHP 的数组是我用过的语言中最强大的，其实就是个有序映射�
 
 使用方便，效率高，用来替换字符串内的特定值。有点类似 str_replace，但更灵活。
 
-	<?php
-	echo strtr('hello world', array('world' => 'hell'));
+    <?php
+    echo strtr('hello world', array('world' => 'hell'));
 
 ##extract
 
 顾名思义，释放一个数组内的元素，构造模板引擎的时候尤为有用
 
-	<?php
-	$arr = array('foo' => 'bar');
-	extract($arr);
-	echo $foo; // output 'bar'
+    <?php
+    $arr = array('foo' => 'bar');
+    extract($arr);
+    echo $foo; // output 'bar'
 
 ##func\_get\_args
 
 获取传递过来的参数
 
-	<?php
-	function test() {
-	    $args = func_get_args();
-	    echo $args[2]; // will print 'd'
-	    echo $args[1]; // will print 3
-	}
-	
-	test(1,3,'d',4);
+    <?php
+    function test() {
+        $args = func_get_args();
+        echo $args[2]; // will print 'd'
+        echo $args[1]; // will print 3
+    }
+    
+    test(1,3,'d',4);
 
 ##cli
 
 command line interface，可以在命令行里运行 PHP 脚本，用来处理日常任务也非常方便。对了别忘了一个非常有用的参数 -a，进入交互模式
 
-	<?php
-	php -a
-	
-	Interactive shell
-	php >
+    <?php
+    php -a
+    
+    Interactive shell
+    php >
 
 ##载入的文件可以有返回值
 
 这个比 .ini 文件更加灵活，你可以在文件里运行一段程序后，返回运行结果
 
-	<?php
-	// config.php
-	return array(
-	    'db' => array(
-		'host' => $_SERVER['HTTP_HOST'] == '127.0.0.1'?'localhost':'example.org',
-	        'user' => 'usr',
-	        // ...
-	    ),
-	    // ...
-	);
-	
-	// index.php
-	$config = include 'config.php';
-	echo $config['db']['host']; // example.org
+    <?php
+    // config.php
+    return array(
+        'db' => array(
+        'host' => $_SERVER['HTTP_HOST'] == '127.0.0.1'?'localhost':'example.org',
+            'user' => 'usr',
+            // ...
+        ),
+        // ...
+    );
+    
+    // index.php
+    $config = include 'config.php';
+    echo $config['db']['host']; // example.org
 
 ##在函数内定义静态变量
 
 把类的特性移植到函数里了，比如有一些运算量较大的函数，可以把运算结果放到这个静态变量，下次调用时检查一下该变量是否已经被赋值。
 
-	<?php
-	function foo($arg1)
-	{
-	    static $cache;
-	
-	    if( !isset($cache[md5($arg1)]) )
-	    {
-	        // Do the work here
-	        $cache[md5($arg1)] = $results;
-	    }
-	
-	    return $cache[md5($arg1)];
-	}
+    <?php
+    function foo($arg1)
+    {
+        static $cache;
+    
+        if( !isset($cache[md5($arg1)]) )
+        {
+            // Do the work here
+            $cache[md5($arg1)] = $results;
+        }
+    
+        return $cache[md5($arg1)];
+    }
 
 ##heredoc
 
 不用再为引号发愁了
 
-	<?php
-	echo <<<EOM
-	  <div id="someblock">
-	    <img src="{$file}" />
-	  </div>
-	EOM;
+    <?php
+    echo <<<EOM
+      <div id="someblock">
+        <img src="{$file}" />
+      </div>
+    EOM;
 
 ##把字符串"当作"数组
 
-	<?php
-	$str = 'hell o World';
-	echo $str; //outputs: "hell o World"
-	
-	$str[0] = 'H';
-	echo $str; //outputs: "Hell o World"
-	
-	$str[4] = null;
-	echo $str; //outputs: "Hello World"
+    <?php
+    $str = 'hell o World';
+    echo $str; //outputs: "hell o World"
+    
+    $str[0] = 'H';
+    echo $str; //outputs: "Hell o World"
+    
+    $str[4] = null;
+    echo $str; //outputs: "Hello World"
 
 ##快速注释/反注释一段代码
 
 这个确实很有意思
 
-	<?php
-	//*
-		echo 'blah';
-		die('not commented');
-	//*/
-	
-	
-	/*
-		echo 'blah';
-		die('commented');
-	//*/
+    <?php
+    //*
+        echo 'blah';
+        die('not commented');
+    //*/
+    
+    
+    /*
+        echo 'blah';
+        die('commented');
+    //*/
 
 ##函数参数类型提示
 
 相对于其他编程语言(java/c#)，PHP 这块比较弱，只能判断数组和对象
 
-	<?php
-	function foo ( array $param0, stdClass $param1 );
+    <?php
+    function foo ( array $param0, stdClass $param1 );
 
 ##数组合并
 
 不用 array_merge，而是使用'+'，使用更方便，也更易理解。在处理默认值和用户定义值时尤为方便。
 
-	<?php
-	// Set the normal defaults.
-	$control_defaults = array( 'type' => 'text', 'size' => 30 );
-	
-	$control = $control_defaults + array( 'name' => 'surname', 'size' => 40 );
+    <?php
+    // Set the normal defaults.
+    $control_defaults = array( 'type' => 'text', 'size' => 30 );
+    
+    $control = $control_defaults + array( 'name' => 'surname', 'size' => 40 );
 
 ##输出缓冲
 
 使用 ob_start，关键是 ob_start 还支持 callback，真是太贴心了。
 
-	<?php
-	function censor($text) {
-		strtr($text, array('胡萝卜' => '***'));
-	}
-	
-	ob_start(censor);
-	echo '小白兔最爱吃胡萝卜';
-	ob_end_flush();
-	
-	//输出：小白兔最爱吃***
+    <?php
+    function censor($text) {
+        strtr($text, array('胡萝卜' => '***'));
+    }
+    
+    ob_start(censor);
+    echo '小白兔最爱吃胡萝卜';
+    ob_end_flush();
+    
+    //输出：小白兔最爱吃***
 
 ##反射
 
@@ -238,46 +238,46 @@ reflection，很强大，基本上能还原一个类的实际面貌。
 
 ##ctype function
 
-	<?php
-	ctype_alnum //是否为字母和数字的组合
-	ctype_digit //是否为数字
-	ctype_alpha //是否为字母
-	...
+    <?php
+    ctype_alnum //是否为字母和数字的组合
+    ctype_digit //是否为数字
+    ctype_alpha //是否为字母
+    ...
 
 ##快速向数组添加元素
 
 如果是追加一个元素的话，推荐使用这种方法，而不是 array_push
 
-	<?php
-	$arr = array();
-	$arr[] = 'foo';
-	$arr[] = 'bar';
+    <?php
+    $arr = array();
+    $arr[] = 'foo';
+    $arr[] = 'bar';
 ##其他
 
 **序列化/反序列化**
 
-	<?php
-	serialize / unserialize
+    <?php
+    serialize / unserialize
 
 **json 支持**
 
-	<?php
-	json_encode / json_decode
+    <?php
+    json_encode / json_decode
 
 **获取对象的类**
 
-	<?php
-	get_class($obj);
+    <?php
+    get_class($obj);
 
 **动态调用函数/方法**
 
-	<?php
-	call_user_func_array
+    <?php
+    call_user_func_array
 
 **错误/异常处理**
 
-	<?php
-	set_error_handler / set_exception_handler
+    <?php
+    set_error_handler / set_exception_handler
 
 
 ##网友提供
@@ -287,18 +287,18 @@ reflection，很强大，基本上能还原一个类的实际面貌。
 array_walk() 能让结构化数据的处理逻辑更清晰.
 实现接近js的传入函数as参数
 
-	<?php
-	function create_sth($walked_value, $key, $other_arg) {
-		//...
-	}
-	function delete_sth(& $walked_value, $key, $other_arg) {
-		//...
-	}
-	
-	$contents = fetch_directory_contents($folder);
-	
-	array_walk($contents, 'create_sth', $other_arg);
-	array_walk($contents, 'delete_sth', $other_arg); 
+    <?php
+    function create_sth($walked_value, $key, $other_arg) {
+        //...
+    }
+    function delete_sth(& $walked_value, $key, $other_arg) {
+        //...
+    }
+    
+    $contents = fetch_directory_contents($folder);
+    
+    array_walk($contents, 'create_sth', $other_arg);
+    array_walk($contents, 'delete_sth', $other_arg); 
 
 --EOF--
 <hr />
