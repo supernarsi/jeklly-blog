@@ -17,6 +17,7 @@ $(function(){
     });
 });
 
+/**
 $(function(){
     // 展示环形菜单
     $("#home_avatar").click(function(){
@@ -77,6 +78,7 @@ $(function(){
         $(document.body).css({"overflow":"scroll"});
     });
 });
+**/
 
 // Disqus 加载
 $(function(){
