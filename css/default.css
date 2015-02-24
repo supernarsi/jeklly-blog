@@ -184,8 +184,8 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #nav_avatars {float:left; display:none;}
 #nav_avatars_back { background:url('/images/bird.png') no-repeat -5px -5px; width:100px; height:100px; border-radius:50%; box-shadow:1px 1px 3px rgb(136, 136, 136);}
 .nav_avatar {width:56px; height:56px; border-radius:50%; position:relative; box-shadow:1px 1px 1px rgb(136, 136, 136); float:left;}
-#nav_avatar1 {top:-75px; left:25px;}
-#nav_avatar2 {top:-75px; left:-31px;}
+#nav_avatar1 {top:-75px; left:-31px;}
+/** #nav_avatar2 {top:-75px; left:-31px;} **/
 #nav_avatar3 {top:-75px; left:-87px;}
 
 
