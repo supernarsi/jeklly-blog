@@ -170,7 +170,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     #back_to_top { display: none; }
     .pagination { width: 100%!important; }
     #footer { width: 100%!important; text-align: center!important; }
-    #about_contact, #about_cards { width: 100%; float:none; }
+    #about_contact, #about_content { width: 100%!important; float:none!important; }
 }
 @media (max-width: 650px){
     #about_douban_show { display: none; }
