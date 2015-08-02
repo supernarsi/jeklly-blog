@@ -170,18 +170,18 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     #category_all { width:100%!important; }
     #category_all ul li { margin:10px!important; padding:0px!important; }
     .category_year { margin:10px!important; }
-    #back_to_top { display: none; }
+    #back_to_top { display: none!important; }
     .pagination { width: 100%!important; }
     #footer { width: 100%!important; text-align: center!important; }
     #about_contact, #about_content { width: 100%!important; float:none!important; }
 }
 @media (max-width: 650px){
-    #about_douban_show { display: none; }
+    #about_douban_show { display: none!important; }
 }
 
 /***********back-to-top settings***********/
 #back_to_top {position:fixed; bottom:20px; left:80%; z-index:99;}
-#back_to_top a{display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
+#back_to_top a {display:block; width:80px; -moz-transition:color 1s; -webkit-transition:color 1s; -o-transition:color 1s;}
 
 
 /***********home_avatar***********/
