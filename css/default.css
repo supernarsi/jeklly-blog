@@ -159,7 +159,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     /*.index_content .section ul { width:85%; }*/
     .index_content .cate_bar { display: none; }
     .index_content .article_list { width: 100%; }
-    .index_content .article_cate { margin: 10px 0; }
+    .index_content .article_cate { width: 100%; margin: 10px 0; }
     .index_content h2 { width: 100%; }
 
     .blog .aside,
