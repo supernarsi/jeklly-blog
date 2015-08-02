@@ -1,17 +1,17 @@
 //回到顶部
 $(function(){
-    $("#back-to-top").hide();
+    $("#back_to_top").hide();
     $(function(){
         $(window).scroll(function(){
             if($(window).scrollTop() > 100){
-                $("#back-to-top").fadeIn(800);
+                $("#back_to_top").fadeIn(800);
             }
             else{
-                $("#back-to-top").fadeOut("fast");
+                $("#back_to_top").fadeOut("fast");
             }
         });
-        $("#back-to-top").click(function(){
-            $('body,html').animate({scrollTop:0}, 1000);
+        $("#back_to_top").click(function(){
+            $('body, html').animate({scrollTop:0}, 1000);
             return false;
         });
     });

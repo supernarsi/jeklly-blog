@@ -19,7 +19,7 @@ address,caption,cite,code,dfn,em,th,var {font-style:normal;font-weight:500;}
 ol,ul {list-style:none;}
 caption,th{text-align:left;}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
-q:before,q:after {content:'';}
+q:before, q:after {content:'';}
 
 .clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
 .clearfix{zoom:1;}
@@ -168,8 +168,8 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     
     #category { width: 270px!important; left: 50px!important; }
     #back_to_top { display: none; }
-    .pagination { width: 100%; }
-    #footer { width: 100%; text-align: center; }
+    .pagination { width: 100%!important; }
+    #footer { width: 100%!important; text-align: center!important; }
 }
 @media (max-width: 650px){
     #about_douban_show { display: none; }
