@@ -26,30 +26,32 @@ layout: default
     </div>
 
     <div class="entry">
-        <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
-        <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
-        {{ content }}
+        <h1 class="entry_title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
+        <p class="entry_date"><time>{{ page.date|date:"%Y-%m-%d" }}</time></p>
+        <article id="article_content">
+            {{ content }}
+        </article>
         
-        <div id="other_posts">
+        <aside id="other_posts">
         {% if page.previous %}
-            <span style="text-align:left"><a href={{ page.previous.url}} class="left">旧语： {{ page.previous.title | truncatewords:5 }}</a></span>
+            <span style="text-align:left"><a href={{ page.previous.url }}>旧语： {{ page.previous.title | truncatewords:5 }}</a></span>
         {% endif %}
         {% if page.next %}
             <span style="text-align:right"><a href={{ page.next.url }} class="right">新言： {{ page.next.title | truncatewords:5 }}</a></span>
         {% endif %}
-        </div>
+        </aside>
 
         <!--加载Disqus评论-->
-        <div style="clear:both" id="disqus">
+        <aside style="clear:both" id="disqus">
             <!--
             <a id="show_disqus" href="javascript:void(0)">点击查看评论</a>
             -->
             <div id="disqus_thread"><div>
-        </div>
+        </aside>
     </div>
 </div>
 
-<div id="floater"></div>
+<footer id="floater"></footer>
 <!--
 <div id="category">
     <div class="close_window">
