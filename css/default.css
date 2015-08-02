@@ -236,14 +236,14 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 
 
 /***********about_me page***********/
-#about_content {width:70%; margin:auto;}
+#about_content {width:80%; margin:auto;}
 #about_content .content { padding:10px;}
 .about_cards {background:rgb(255, 255, 255); box-shadow:0 2px 6px rgb(204, 204, 204); margin-bottom:30px;}
-#about_douban_show {width:400px; float:right;}
+#about_douban_show {width:60%; float:left;}
 #about_douban_show .content {text-align:center;}
 #about_douban_show .words {text-align:left;}
 #about_douban_show .content  td img{margin:10px 13px; box-shadow:2px 3px 6px rgb(204, 204, 204);}
-#about_contact {width:245px; float:left;}
+#about_contact {width:35%; float:right;}
 #about_contact li {margin:7px 5px;}
 #about_contact .icons {width:21px; margin-bottom:-5px;}
 #about_contact a {color:rgb(128, 128, 128); text-decoration:none;}
