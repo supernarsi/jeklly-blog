@@ -19,7 +19,7 @@
 <body>
     {{ content }}
     
-    <p id="back-to-top"><a href="#top"><img src="/images/back-to-top.png" alt="back to the top"></a></p>
+    <p id="back_to_top"><a href="#top"><img src="/images/back-to-top.png" alt="back to the top"></a></p>
     
     <footer id="footer">
         <div class="copyright">
@@ -30,20 +30,6 @@
     </footer>
 
     <script src="../js/common.js"></script>
-    
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-        })
-    </script>
     <!--统计代码-->
     <div style="display:none">
     <script src="http://s20.cnzz.com/stat.php?id=5237316&web_id=5237316&show=pic" language="JavaScript"></script>

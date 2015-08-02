@@ -32,17 +32,17 @@ layout: default
             };
         })();
 
-        $('.artical-cate li').mouseenter(function(){
+        $('.artical_cate li').mouseenter(function(){
             animateBar($(this));
         }).mouseleave(function(){
-            animateBar($('.artical-cate .on'));
+            animateBar($('.artical_cate .on'));
         });
 
         $(window).resize(function(e){
             waitForFinalEvent(function(){
-                animateBar($('.artical-cate .on'));
+                animateBar($('.artical_cate .on'));
             })
         })
-        animateBar($('.artical-cate .on'),true);
+        animateBar($('.artical_cate .on'),true);
     });
 </script>
