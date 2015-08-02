@@ -30,6 +30,20 @@
     </footer>
 
     <script src="../js/common.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $('.home_follow').click(function(e){
+                e.preventDefault();
+
+                if($('.home_contact').is(':visible')){
+                    $('.home_contact').slideUp(100);
+                }else{
+                    $('.home_contact').slideDown(100);
+                }
+            });
+        })
+    </script>
     <!--统计代码-->
     <div style="display:none">
     <script src="http://s20.cnzz.com/stat.php?id=5237316&web_id=5237316&show=pic" language="JavaScript"></script>
