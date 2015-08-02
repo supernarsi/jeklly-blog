@@ -85,7 +85,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .index_content .article_cate li a:hover { text-decoration:none; }
 .index_content .article_cate li.on span{ color:red; }
 
-.index_content .cate_bar { height:3px; width:70%; margin:0 auto;margin-bottom:40px; }
+.index_content .cate_bar { height:3px; width:70%; margin:0 auto; margin-bottom:40px; }
 .index_content #cateBar { display:inline-block; zoom:1; height:3px; background:red; position:relative; width:0; }
 
 /***************Wiki Style*****************/
@@ -146,7 +146,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     h3{ font-size: 16px; }
     embed { display: none; }
 
-    .entry_title,.entry_title a { font-size: 24px; }
+    .entry_title, .entry_title a { font-size: 24px; }
     .entry_date { margin-bottom: 40px; }
     .entry img { max-width: 90%; }
     .entry pre ol li { margin-bottom: 0; line-height: 1em; }
@@ -157,9 +157,9 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     .index_content .aside { position:relative; width: 100%; height: 300px; max-width: none; }
     .index_content .section { width: 100%; margin: 0; padding: 0; }
     /*.index_content .section ul { width:85%; }*/
-    .index_content .cate_bar { width: 100%; }
+    .index_content .cate_bar { display: none; }
     .index_content .article_list { width: 100%; }
-    .index_content .article_cate { margin-top: 10px; }
+    .index_content .article_cate { margin: 10px 0; }
     .index_content h2 { width: 100%; }
 
     .blog .aside,
@@ -170,6 +170,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     #back_to_top { display: none; }
     .pagination { width: 100%!important; }
     #footer { width: 100%!important; text-align: center!important; }
+    #about_contact, #about_cards { width: 100%; float:none; }
 }
 @media (max-width: 650px){
     #about_douban_show { display: none; }
