@@ -242,7 +242,8 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #about_douban_show {width:60%; float:left;}
 #about_douban_show .content {text-align:center;}
 #about_douban_show .words {text-align:left;}
-#about_douban_show .content  td img{margin:10px 13px; box-shadow:2px 3px 6px rgb(204, 204, 204);}
+#about_douban_show .content  td img {margin:10px 13px; box-shadow:2px 3px 6px rgb(204, 204, 204);}
+#readed_books_from_douban table {margin: auto;}
 #about_contact {width:35%; float:right;}
 #about_contact li {margin:7px 5px;}
 #about_contact .icons {width:21px; margin-bottom:-5px;}
