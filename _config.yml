@@ -40,7 +40,7 @@ kramdown:
 
 permalink:    /:title
 
-title:        Narsight
+title:        narsight
 alt:          Narsi's blog
 author:
   name:       Narsi

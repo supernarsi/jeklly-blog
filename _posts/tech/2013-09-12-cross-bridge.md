@@ -85,39 +85,37 @@ T<sub>S1</sub> -  T<sub>S2</sub> = (T<sub>1</sub> + T<sub>3</sub>) - (T<sub>2</s
 
 使用 PHP 实现的程序如下：
 
-	/** 
-	 * 过桥问题算法实现 
+	/**
+	 * 过桥问题算法实现
+	 *
 	 * @param array $per_time 所有人过桥分别所需的时间
-	 * @param int $time 初始需要使用的总时间，默认0
-	 * @return int 需要使用的总时间 
-	 */ 
-	function crossBridge(array $per_time, $time = 0){
+	 * @param int   $time     初始需要使用的总时间，默认0
+	 *
+	 * @return int 需要使用的总时间
+	 */
+	function crossBridge(array $per_time, $time = 0)
+	{
 	    sort($per_time);                    // 将时间数组按从小到大排序
 	    $count = count($per_time);          // 计算人数
-	    if($count < 2){                     // 剩余人数少于2时返回总时间
+	    if ($count < 2) {                     // 剩余人数少于2时返回总时间
 	        return $time;
 	    }
 	    // 判断最快者和次慢者所用时间和大于2倍次快者，使用「方法二」。
-	    if(2 * $per_time[1] < $per_time[0] + $per_time[$count - 2] && $count > 3){
-	        $time += $per_time[1] + $per_time[0] + 
-	            $per_time[$count - 1] + $per_time[1];
-	    }
-	    // 否则使用「方法一」。
-	    else if($count > 3){
-	        $time += $per_time[$count - 1] + $per_time[0] + 
-	            $per_time[$count - 2] + $per_time[0];
-	    }
-	    // 只剩三人时，剩余人所需时间相加。
-	    else if($count == 3){
+	    if (2 * $per_time[1] < $per_time[0] + $per_time[$count - 2] && $count > 3) {
+	        $time += $per_time[1] + $per_time[0] + $per_time[$count - 1] + $per_time[1];
+	    } // 否则使用「方法一」。
+	    else if ($count > 3) {
+	        $time += $per_time[$count - 1] + $per_time[0] + $per_time[$count - 2] + $per_time[0];
+	    } // 只剩三人时，剩余人所需时间相加。
+	    else if ($count == 3) {
 	        $time += $per_time[0] + $per_time[1] + $per_time[2];
-	    }
-	    // 剩余两人时，所需时间为慢者所需时间。
-	    else{
+	    } // 剩余两人时，所需时间为慢者所需时间。
+	    else {
 	        $time += $per_time[1];
 	    }
-	
 	    array_pop($per_time);                 // 减少两人
 	    array_pop($per_time);
+
 	    return crossBridge($per_time, $time); // 递归调用
 	}
 
