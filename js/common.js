@@ -1,24 +1,24 @@
 //回到顶部
-$(function(){
-    $("#back_to_top").hide();
-    $(function(){
-        $(window).scroll(function(){
-            if($(window).scrollTop() > 100){
-                $("#back_to_top").fadeIn(800);
-            }
-            else{
-                $("#back_to_top").fadeOut("fast");
-            }
-        });
-        $("#back_to_top").click(function(){
-            $('body, html').animate({scrollTop:0}, 1000);
-            return false;
-        });
+$(function () {
+  $("#back_to_top").hide();
+  $(function () {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 100) {
+        $("#back_to_top").fadeIn(800);
+      }
+      else {
+        $("#back_to_top").fadeOut("fast");
+      }
     });
+    $("#back_to_top").click(function () {
+      $('body, html').animate({scrollTop: 0}, 1000);
+      return false;
+    });
+  });
 });
 
 /**
-$(function(){
+ $(function(){
     // 展示环形菜单
     $("#home_avatar").click(function(){
         if($("#nav_avatars").is(":hidden")){
@@ -78,24 +78,38 @@ $(function(){
         $(document.body).css({"overflow":"scroll"});
     });
 });
-**/
+ **/
 
 // Disqus 加载
-$(function(){
-//    $("#show_disqus").click(function(){
-    // 有评论框时才加载
-    if($("#disqus_thread").length > 0){
-        window.disqus_shortname = 'narsi'; 
-        $(this).html('加载中...');
-        var that = this;
-        $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
-    }
-    //});
+/*
+ $(function(){
+ //    $("#show_disqus").click(function(){
+ // 有评论框时才加载
+ if($("#disqus_thread").length > 0){
+ window.disqus_shortname = 'narsi';
+ $(this).html('加载中...');
+ var that = this;
+ $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
+ }
+ //});
 
-    //添加 Google-code-preffity 需要的 class
-    $('pre').addClass('prettyprint linenums');
-    
-    $.getScript('/js/prettify/prettify.js',function(){
-        prettyPrint();
-    });
-});
+ //添加 Google-code-preffity 需要的 class
+ $('pre').addClass('prettyprint linenums');
+
+ $.getScript('/js/prettify/prettify.js',function(){
+ prettyPrint();
+ });
+ });
+ */
+
+// 多说
+var duoshuoQuery = {short_name: "narsi"};
+(function () {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';
+  ds.async = true;
+  ds.src = 'http://static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0]
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
