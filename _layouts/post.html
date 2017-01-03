@@ -40,7 +40,7 @@ layout: default
     </div>
 
     <div class="entry">
-        <h1 class="entry_title"><a href="{{page.url}}" title="{{ page.title }}">{{ page.title }}</a></h1>
+        <h1 class="entry_title"><a href="{{page.url}}" title="{{page.title}}">{{ page.title }}</a></h1>
         <p class="entry_date">
             <time>{{ page.date|date:"%Y-%m-%d" }}</time>
         </p>
@@ -61,7 +61,9 @@ layout: default
             {% endif %}
         </aside>
 
-        <div class="ds-thread"></div>
+        <div class="ds-thread" data-thread-key="{{ page.url }}" data-title="{{ page.title }}"
+             data-url="http://www.huangxc.com{{ page.url }}">
+        </div>
     </div>
 </div>
 
