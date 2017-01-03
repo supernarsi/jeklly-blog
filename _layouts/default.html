@@ -4,50 +4,48 @@
     <!--
     * Author:         Narsi
     -->
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>{% if page.title %}{{ page.title }} {% else %}{{ site.title }}{% endif %}</title>
-    <meta name="author" content="Narsi" />
-    <meta name="description" content="Narsi's Blog" />
+    <meta name="author" content="Narsi"/>
+    <meta name="description" content="Narsi's Blog"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/css/default.css" type="text/css" />
-    <link rel="stylesheet" href="/css/pages.css" type="text/css" />
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" type="text/css" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
+    <link rel="stylesheet" href="/css/default.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/pages.css" type="text/css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+          type="text/css"/>
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}"/>
     <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-    {{ content }}
-    
-    <p id="back_to_top"><a href="#top"><img src="/images/back-to-top.png" alt="back to the top"></a></p>
-    
-    <footer id="footer">
-        <div class="copyright">
-            {% for line in site.copyright %}
-            <p>{{ line }}</p>
-            {% endfor %}
-        </div>
-    </footer>
+{{ content }}
 
-    <script src="../js/common.js"></script>
+<p id="back_to_top"><a href="#top"><img src="/images/back-to-top.png" alt="back to the top"></a></p>
 
-    <script type="text/javascript">
-        $(function(){
-            $('.home_follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home_contact').is(':visible')){
-                    $('.home_contact').slideUp(100);
-                }else{
-                    $('.home_contact').slideDown(100);
-                }
-            });
-        })
-    </script>
-    <!--统计代码-->
-    <div style="display:none">
-    <script src="http://s20.cnzz.com/stat.php?id=5237316&web_id=5237316&show=pic" language="JavaScript"></script>
-    <!--统计代码-->
+<footer id="footer">
+    <div class="copyright">
+        {% for line in site.copyright %}
+        <p>{{ line }}</p>
+        {% endfor %}
     </div>
- </body>
+</footer>
+
+<script src="../js/common.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var home_contact = $('.home_follow');
+        home_contact.click(function (e) {
+            e.preventDefault();
+
+            if (home_contact.is(':visible')) {
+                home_contact.slideUp(100);
+            } else {
+                home_contact.slideDown(100);
+            }
+        });
+    })
+</script>
+
+</body>
 </html>
