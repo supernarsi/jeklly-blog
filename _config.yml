@@ -10,7 +10,7 @@ plugins_dir: ./_plugins
 future:      true
 lsi:         false
 highlighter: false
-markdown:    rdiscount
+markdown:    kramdown
 
 maruku:
   use_tex:    false
